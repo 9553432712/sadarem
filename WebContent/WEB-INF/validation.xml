@@ -1,0 +1,2128 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE form-validation PUBLIC
+"-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+"http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+
+    <!--
+     This is a minimal Validator form file with a couple of examples.
+-->
+
+    <global>
+
+        <!-- An example global constant
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+        end example-->
+
+    </global>
+
+    <formset>
+
+        <!-- An example form -->
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                <arg key="logonForm.password"/>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[0-9a-zA-Z]*$</var-value>
+                </var>
+            </field>
+        </form>
+    </formset>
+    <formset>
+        <form name="MentalIllnessActionForm">
+            <field
+                property="selfcare"
+                depends="intRange">
+                <arg0 key="MentalIllnessActionForm.selfcare"/>
+                <arg1 name="range" key="${var:min}"  resource="false"/>
+                <arg2 name="range" key="${var:max}"  resource="false"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>4</var-value>
+                </var>
+            </field>
+
+
+
+            <field
+                property="personalactivities"
+                depends="intRange">
+                <arg0 key="MentalIllnessActionForm.personalactivities"/>
+                <arg1 name="range" key="${var:min}"  resource="false"/>
+                <arg2 name="range" key="${var:max}"  resource="false"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>4</var-value>
+                </var>
+            </field>
+            <field
+                property="communication"
+                depends="intRange">
+                <arg0 key="MentalIllnessActionForm.communication"/>
+                <arg1 name="range" key="${var:min}"  resource="false"/>
+                <arg2 name="range" key="${var:max}"  resource="false"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>4</var-value>
+                </var>
+            </field>
+            <field
+                property="work"
+                depends="intRange">
+                <arg0 key="MentalIllnessActionForm.work"/>
+                <arg1 name="range" key="${var:min}"  resource="false"/>
+                <arg2 name="range" key="${var:max}"  resource="false"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>4</var-value>
+                </var>
+            </field>
+            <field
+                property="duration"
+                depends="intRange">
+                <arg0 key="MentalIllnessActionForm.duration"/>
+                <arg1 name="range" key="${var:min}"  resource="false"/>
+                <arg2 name="range" key="${var:max}"  resource="false"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>4</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="DwarfismActionForm">
+
+            <field
+                property="ageyears"
+                depends="intRange">
+                <arg0 key="DwarfismActionForm.ageyears"/>
+                <arg1 name="range" key="${var:min}"  resource="false"/>
+                <arg2 name="range" key="${var:max}"  resource="false"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>140</var-value>
+                </var>
+            </field>
+
+            <field
+                property="agemonths"
+                depends="intRange">
+                <arg0 key="DwarfismActionForm.agemonths"/>
+                <arg1 name="range" key="${var:min}"  resource="false"/>
+                <arg2 name="range" key="${var:max}"  resource="false"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>11</var-value>
+                </var>
+            </field>
+
+            <field
+                property="height"
+                depends="floatRange">
+                <arg0 key="DwarfismActionForm.height"/>
+                <arg1 name="range" key="${var:min}"  resource="false"/>
+                <arg2 name="range" key="${var:max}"  resource="false"/>
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0.0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>100.0</var-value>
+                </var>
+
+
+            </field>
+
+            <field
+                property="ageyears"
+                depends="required">
+                <arg0 key="DwarfismActionForm.ageyears2"/>
+            </field>
+
+            <field
+                property="height"
+                depends="required">
+                <arg0 key="DwarfismActionForm.height2"/>
+            </field>
+
+        </form>
+
+        <form name="mentalretardationactionform">
+            <field
+                property="mentalage"
+                depends="intRange">
+                <arg0 key="mentalretardationactionform.mentalage"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>50</var-value>
+                </var>
+
+            </field>
+
+
+        </form>
+
+
+
+        <form name="lowerextremityform">
+            <field
+                property="romhipflexionextensionright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romhipflexionextensionright"/>
+                <arg1 name="range" key="${var:min}" resource="false" />
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>140</var-value>
+                </var>
+
+            </field>
+            <field
+                property="romhiprotationright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romhiprotationright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>90</var-value>
+                </var>
+
+            </field>
+            <field
+                property="romhipabductionadductionright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romhipabductionadductionright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>90</var-value>
+                </var>
+
+            </field>
+            <field
+                property="romhipflexionextensionleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romhipflexionextensionleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>140</var-value>
+                </var>
+
+            </field>
+            <field
+                property="romhiprotationleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romhiprotationleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>90</var-value>
+                </var>
+
+            </field>
+            <field
+                property="romhipabductionadductionleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romhipabductionadductionleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>90</var-value>
+                </var>
+
+            </field>
+            <field
+                property="romkneeflexionextensionright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romkneeflexionextensionright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>125</var-value>
+                </var>
+
+            </field>
+            <field
+                property="romkneeflexionextensionleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romkneeflexionextensionleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>125</var-value>
+                </var>
+
+            </field>
+            <field
+                property="romankledorsiflexionpalmarflexionright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romankledorsiflexionpalmarflexionright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>70</var-value>
+                </var>
+
+            </field>
+            <field
+                property="romankledorsiflexionpalmarflexionleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romankledorsiflexionpalmarflexionleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>70</var-value>
+                </var>
+
+            </field>
+            <field
+                property="romankleinversioneversionright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romankleinversioneversionright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>60</var-value>
+                </var>
+
+            </field>
+            <field
+                property="romankleinversioneversionleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.romankleinversioneversionleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>60</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mshipflexormusclesright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mshipflexormusclesright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mshipextensormusclesright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mshipextensormusclesright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mshiprotatormusclesright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mshiprotatormusclesright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mshipabductormusclesright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mshipabductormusclesright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mshipadductormusclesright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mshipadductormusclesright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mshipflexormusclesleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mshipflexormusclesleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mshipextensormusclesleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mshipextensormusclesleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mshiprotatormusclesleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mshiprotatormusclesleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mshipabductormusclesleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mshipabductormusclesleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mshipadductormusclesleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mshipadductormusclesleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mskneeflexormusclesright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mskneeflexormusclesright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mskneeextensormusclesright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mskneeextensormusclesright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mskneeflexormusclesleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mskneeflexormusclesleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="mskneeextensormusclesleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.mskneeextensormusclesleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="msankleplanterflexormusclesright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.msankleplanterflexormusclesright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="msankledorsiflexormusclesright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.msankledorsiflexormusclesright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="msankleinvertormusclesright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.msankleinvertormusclesright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="msankleevertormusclesright"
+                depends="intRange">
+                <arg0 key="lowerextremityform.msankleevertormusclesright"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="msankleplanterflexormusclesleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.msankleplanterflexormusclesleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="msankledorsiflexormusclesleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.msankledorsiflexormusclesleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="msankleinvertormusclesleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.msankleinvertormusclesleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+            <field
+                property="msankleevertormusclesleft"
+                depends="intRange">
+                <arg0 key="lowerextremityform.msankleevertormusclesleft"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+
+            </field>
+        </form>
+        <form name="mentalretardationactiontestform">
+
+            <field
+                property="sfbyear"
+                depends="intRange,integer">
+                <arg0 key="mentalretardationactiontestform.sfbyear"/>
+                <arg1 name="range" key="${var:min}" resource="false" />
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>150</var-value>
+                </var>
+
+            </field>
+
+            <field
+                property="sfbmonth"
+                depends="intRange,integer">
+                <arg0 key="mentalretardationactiontestform.sfbmonth"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>12</var-value>
+                </var>
+
+            </field>
+
+
+            <field
+                property="sfbtrialone"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.sfbtrialone"/>
+
+            </field>
+
+            <field
+                property="sfbtrialtwo"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.sfbtrialtwo"/>
+
+            </field>
+
+            <field
+                property="sfbtrialthree"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.sfbtrialthree"/>
+
+            </field>
+
+
+            <field
+                property="misicinformationraw"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicinformationraw"/>
+
+            </field>
+
+
+            <field
+                property="misicinformationtq"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicinformationtq"/>
+
+            </field>
+
+            <field
+                property="misicpcrawscore"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicpcrawscore"/>
+
+            </field>
+
+            <field
+                property="misicpctq"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicpctq"/>
+
+            </field>
+
+            <field
+                property="misiccomprehensionrawscore"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misiccomprehensionrawscore"/>
+
+            </field>
+
+
+            <field
+                property="misiccomprehensiontq"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misiccomprehensiontq"/>
+
+            </field>
+
+
+            <field
+                property="misicbdrawscore"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicbdrawscore"/>
+
+            </field>
+
+            <field
+                property="misicbdtq"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicbdtq"/>
+
+            </field>
+
+            <field
+                property="misicarithmeticrawscore"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicarithmeticrawscore"/>
+
+            </field>
+
+            <field
+                property="misicarithmetictq"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicarithmetictq"/>
+
+            </field>
+
+
+            <field
+                property="misicoarawscore"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicoarawscore"/>
+
+            </field>
+
+            <field
+                property="misicoatq"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicoatq"/>
+
+            </field>
+
+            <field
+                property="misicsimilaritiesrawscore"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicsimilaritiesrawscore"/>
+
+            </field>
+
+
+            <field
+                property="misicsimilaritiestq"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicsimilaritiestq"/>
+
+            </field>
+
+
+
+            <field
+                property="misiccodingrawscore"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misiccodingrawscore"/>
+
+            </field>
+
+
+            <field
+                property="misiccodingtq"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misiccodingtq"/>
+
+            </field>
+
+            <field
+                property="misicvocabularyrawscore"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicvocabularyrawscore"/>
+
+            </field>
+
+            <field
+                property="misicvocabularytq"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicvocabularytq"/>
+
+            </field>
+
+
+            <field
+                property="misicmazesrawscore"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicmazesrawscore"/>
+
+
+
+
+            </field>
+
+
+
+
+            <field
+                property="misicmazestq"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicmazestq"/>
+
+            </field>
+
+
+
+
+            <field
+                property="misicdigitspanrawscore"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicdigitspanrawscore"/>
+
+            </field>
+
+
+
+            <field
+                property="misicdigitspantq"
+                depends="integer">
+                <arg0 key="mentalretardationactiontestform.misicdigitspantq"/>
+
+            </field>
+
+
+
+            <field
+                property="dstyear" depends="intRange">
+                <arg0 key="year"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>100</var-value>
+                </var>
+            </field>
+            <field
+                property="dstmonth" depends="double">
+                <arg0 key="month"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+
+
+                    <var-value>12</var-value>
+                </var>
+            </field>
+            <field
+                property="vsmsyear" depends="intRange">
+                <arg0 key="year"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>100</var-value>
+                </var>
+            </field>
+            <field
+                property="vsmsmonth" depends="double">
+                <arg0 key="month"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>12</var-value>
+                </var>
+            </field>
+            <field
+                property="bictyear" depends="intRange">
+                <arg0 key="year"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>100</var-value>
+                </var>
+            </field>
+            <field
+                property="bictmonth" depends="intRange">
+                <arg0 key="month"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>12</var-value>
+                </var>
+            </field>
+            <field
+                property="bictbasalage" depends="integer">
+                <arg0 key="basalage"/>
+            </field>
+            <field
+                property="bictterminalage" depends="integer">
+                <arg0 key="terminalage"/>
+            </field>
+            <!--devi****************************************************** -->
+
+            <field
+                property="pat_Second_One" depends="intRange">
+                <arg0 key="second"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>120</var-value>
+                </var>
+            </field>
+            <field
+                property="pat_Second_Two" depends="intRange">
+                <arg0 key="second"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>120</var-value>
+                </var>
+            </field>
+            <field
+                property="pat_Second_Three" depends="intRange">
+                <arg0 key="mrsecondrange"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>         <field
+                property="pat_Second_Four" depends="intRange">
+                <arg0 key="mrsecondrange"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+            <field
+                property="pat_Second_Five" depends="intRange">
+                <arg0 key="mrsecondrange"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+            <field
+                property="pat_Second_Six" depends="intRange">
+                <arg0 key="mrsecondrange"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+            <field
+                property="pat_Second_Seven" depends="intRange">
+                <arg0 key="mrsecondrange"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+            <field
+                property="pat_Second_Eight" depends="intRange">
+                <arg0 key="mrsecondrange"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+            <field
+                property="pat_Second_Nine" depends="intRange">
+                <arg0 key="mrsecondrange"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+
+            <field
+                property="pat_SA_One" depends="integer">
+                <arg0 key="scoreaward"/>
+            </field>
+
+            <field
+                property="pat_SA_Two" depends="integer">
+                <arg0 key="scoreaward"/>
+            </field>
+
+            <field
+                property="pat_SA_Three" depends="integer">
+                <arg0 key="scoreaward"/>
+            </field>
+
+            <field
+                property="pat_SA_Four" depends="integer">
+                <arg0 key="scoreaward"/>
+            </field>
+
+            <field
+                property="pat_SA_Five" depends="integer">
+                <arg0 key="scoreaward"/>
+            </field>
+
+            <field
+                property="pat_SA_Six" depends="integer">
+                <arg0 key="scoreaward"/>
+            </field>
+
+            <field
+                property="pat_SA_Seven" depends="integer">
+                <arg0 key="scoreaward"/>
+            </field>
+
+            <field
+                property="pat_SA_Eight" depends="integer">
+                <arg0 key="scoreaward"/>
+            </field>
+
+            <field
+                property="pat_SA_Nine" depends="integer">
+                <arg0 key="scoreaward"/>
+            </field>
+
+
+            <field
+                property="pat_Year" depends="intRange">
+                <arg0 key="year"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>100</var-value>
+                </var>
+            </field>
+            <field
+                property="pat_Month" depends="intRange">
+                <arg0 key="month"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>12</var-value>
+                </var>
+            </field>
+            <field
+                property="bbpti_KOHS_Block_Design_Test" depends="integer">
+                <arg0 key="Kohsblockdesigntest"/>
+            </field>
+
+            <field
+                property="bbpti_Passalong_Test" depends="integer">
+                <arg0 key="passalongtest"/>
+            </field>
+
+            <field
+                property="bbpti_PatternDrawing_Test" depends="integer">
+                <arg0 key="patterndrawingtest"/>
+            </field>
+
+            <field
+                property="bbpti_ImmediateMemory_Test" depends="integer">
+                <arg0 key="immediatememorytest"/>
+            </field>
+
+            <field
+                property="bbpti_PictureConstruction_Test" depends="integer">
+                <arg0 key="pictureconstructiontest"/>
+            </field>
+            <field
+                property="bbpti_IQ" depends="double">
+                <arg0 key="bbptiiq"/>
+            </field>
+
+        </form>
+        <form name="UpperExtrimityActionForm">
+            <field
+                property="rom_sf_right"
+                depends="intRange">
+                <arg0 key="rom_sf_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>220</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_sf_left"
+                depends="intRange">
+                <arg0 key="rom_sf_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>220</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_sa_right"
+                depends="intRange">
+                <arg0 key="rom_sa_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_sa_left"
+                depends="intRange">
+                <arg0 key="rom_sa_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+
+            <field
+                property="rom_sr_right"
+                depends="intRange">
+                <arg0 key="rom_sr_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_sr_left"
+                depends="intRange">
+                <arg0 key="rom_sr_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_ef_right"
+                depends="intRange">
+                <arg0 key="rom_ef_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_ef_left"
+                depends="intRange">
+                <arg0 key="rom_ef_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>150</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_es_right"
+                depends="intRange">
+                <arg0 key="rom_es_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_es_left"
+                depends="intRange">
+                <arg0 key="rom_es_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>180</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_wd_right"
+                depends="intRange">
+                <arg0 key="rom_wd_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>160</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_wd_left"
+                depends="intRange">
+                <arg0 key="rom_wd_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>160</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_wr_right"
+                depends="intRange">
+                <arg0 key="rom_wr_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>55</var-value>
+                </var>
+            </field>
+            <field
+                property="rom_wr_left"
+                depends="intRange">
+                <arg0 key="rom_wr_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>55</var-value>
+                </var>
+            </field>
+            <!--ljkasdlfjasldjfla****************************************************** -->
+            <field
+                property="ms_sf_right"
+                depends="intRange">
+                <arg0 key="ms_sf_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_sf_left"
+                depends="intRange">
+                <arg0 key="ms_sf_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_se_right"
+                depends="intRange">
+                <arg0 key="ms_se_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_se_left"
+                depends="intRange">
+                <arg0 key="ms_se_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_sab_right"
+                depends="intRange">
+                <arg0 key="ms_sab_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_sab_left"
+                depends="intRange">
+                <arg0 key="ms_sab_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_sad_right"
+                depends="intRange">
+                <arg0 key="ms_sad_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_sad_left"
+                depends="intRange">
+                <arg0 key="ms_sad_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_sext_right"
+                depends="intRange">
+                <arg0 key="ms_sext_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_sext_left"
+                depends="intRange">
+                <arg0 key="ms_sext_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_sint_right"
+                depends="intRange">
+                <arg0 key="ms_sint_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_sint_left"
+                depends="intRange">
+                <arg0 key="ms_sint_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_ef_right"
+                depends="intRange">
+                <arg0 key="ms_ef_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_ef_left"
+                depends="intRange">
+                <arg0 key="ms_ef_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_ee_right"
+                depends="intRange">
+                <arg0 key="ms_ee_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_ee_left"
+                depends="intRange">
+                <arg0 key="ms_ee_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_ep_right"
+                depends="intRange">
+                <arg0 key="ms_ep_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_ep_left"
+                depends="intRange">
+                <arg0 key="ms_ep_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_es_right"
+                depends="intRange">
+                <arg0 key="ms_es_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_es_left"
+                depends="intRange">
+                <arg0 key="ms_es_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_wd_right"
+                depends="intRange">
+                <arg0 key="ms_wd_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_wd_left"
+                depends="intRange">
+                <arg0 key="ms_wd_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_wp_right"
+                depends="intRange">
+                <arg0 key="ms_wp_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_wp_left"
+                depends="intRange">
+                <arg0 key="ms_wp_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_wr_right"
+                depends="intRange">
+                <arg0 key="ms_wr_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_wr_left"
+                depends="intRange">
+                <arg0 key="ms_wr_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_wu_right"
+                depends="intRange">
+                <arg0 key="ms_wu_right"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+            <field
+                property="ms_wu_left"
+                depends="intRange">
+                <arg0 key="ms_wu_left"/>
+                <arg1 name="range" key="${var:min}" resource="false"/>
+                <arg2 name="range" key="${var:max}" resource="false"/>
+
+                <var>
+                    <var-name>min</var-name>
+                    <var-value>0</var-value>
+                </var>
+                <var>
+                    <var-name>max</var-name>
+                    <var-value>5</var-value>
+                </var>
+            </field>
+
+        </form>
+    </formset>
+    <formset>
+        <form name="DoctorsInformationForm">
+            <field property="typeofdisability" depends="required">
+                <arg position="0" key="DoctorsInformation.TypeofDisability"/>
+            </field>
+            <field property="doctorname1" depends="required">
+                <arg position="0" key="DoctorsInformation.Doctor1Name"/>
+            </field>
+            <field property="registerno1" depends="required">
+                <arg position="0" key="DoctorsInformation.Doctor1Registerno"/>
+            </field>
+            <field property="designation1" depends="required">
+                <arg position="0" key="DoctorsInformation.Doctor1Designation"/>
+            </field>
+            <field property="doctorname2" depends="required">
+                <arg position="0" key="DoctorsInformation.Doctor2Name"/>
+            </field>
+            <field property="registerno2" depends="required">
+                <arg position="0" key="DoctorsInformation.Doctor2Registerno"/>
+            </field>
+            <field property="designation2" depends="required">
+                <arg position="0" key="DoctorsInformation.Doctor2Designation"/>
+            </field>
+            <field property="doctorname3" depends="required">
+                <arg position="0" key="DoctorsInformation.Doctor3Name"/>
+            </field>
+            <field property="registerno3" depends="required">
+                <arg position="0" key="DoctorsInformation.Doctor3Registerno"/>
+            </field>
+            <field property="designation3" depends="required">
+                <arg position="0" key="DoctorsInformation.Doctor3Designation"/>
+            </field>
+            <!--<field property="hospitalname" depends="required">
+                <arg position="0" key="DoctorsInformation.HospitalName"/>
+            </field>
+            <field property="hospitaladdress" depends="required">
+                <arg position="0" key="DoctorsInformation.HospitalAddress"/>
+            </field>  -->
+        </form>
+        <form name="/selectdoctorsinformation">
+            <field property="typeofdisability" depends="required">
+                <arg position="0" key="DoctorsInformation.TypeofDisability"/>
+            </field>
+        </form>
+
+    </formset>
+
+    <!-- An example formset for another locale -->
+    <formset language="fr">
+
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^[0-9a-zA-Z]*$</constant-value>
+        </constant>
+
+        <!-- An example form -->
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                <arg key="logonForm.password"/>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[0-9a-zA-Z]*$</var-value>
+                </var>
+            </field>
+        </form>
+    </formset>
+
+</form-validation>

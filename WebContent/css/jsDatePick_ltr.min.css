@@ -1,0 +1,504 @@
+.JsDatePickBox
+{
+	position:relative;width:212px;
+	font-family:Arial;
+	z-index:9999 !important;
+}
+
+.JsDatePickBox .jsDatePickCloseButton
+{
+	cursor:pointer;
+	position:absolute;
+	z-index:9999 !important;
+	top:1px;
+	right:10px;
+	width:33px;
+	height:13px;
+	background:url(../img/closeButton_normal.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .jsDatePickCloseButtonOver
+{
+	cursor:pointer;
+	position:absolute;
+	z-index:9999 !important;
+	top:1px;
+	right:10px;
+	width:33px;
+	height:13px;
+	background:url(../img/closeButton_over.gif) left top no-repeat;
+}
+.JsDatePickBox .jsDatePickCloseButtonDown
+{
+	cursor:pointer;
+	position:absolute;
+	z-index:9999 !important;
+	top:1px;
+	right:10px;
+	width:33px;
+	height:13px;
+	background:url(../img/closeButton_down.gif) left top no-repeat;
+}
+.JsDatePickBox .boxLeftWall
+{
+	float:left;
+	width:7px;
+	margin:0;
+	padding:0;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxLeftWall .leftTopCorner
+{
+	margin:0;
+	padding:0;
+	width:7px;
+	height:8px;
+	background:url(../img/boxTopLeftCorner.png) left top no-repeat;
+	overflow:hidden;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxLeftWall .leftBottomCorner
+{
+	margin:0;
+	padding:0;
+	width:7px;
+	height:8px;
+	background:url(../img/boxBottomLeftCorner.png) left top no-repeat;
+	overflow:hidden;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxLeftWall .leftWall
+{
+	margin:0;
+	padding:0;
+	width:7px;
+	background:url(../img/boxSideWallPx.gif) #fff left top repeat-y;
+	overflow:hidden;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxRightWall
+{
+	float:left;
+	width:7px;
+	margin:0;
+	padding:0;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxRightWall .rightTopCorner
+{
+	margin:0;
+	padding:0;
+	width:7px;
+	height:8px;
+	background:url(../img/boxTopRightCorner.png) left top no-repeat;
+	overflow:hidden;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxRightWall .rightBottomCorner
+{
+	margin:0;
+	padding:0;
+	width:7px;
+	height:8px;
+	background:url(../img/boxBottomRightCorner.png) left top no-repeat;
+	overflow:hidden;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxRightWall .rightWall
+{
+	margin:0;
+	padding:0;
+	width:7px;
+	background:url(../img/boxSideWallPx.gif) #fff right top repeat-y;
+	overflow:hidden;
+	z-index:9999 !important;
+}
+.JsDatePickBox .topWall
+{
+	position:absolute;
+	overflow:hidden;
+	top:0;
+	left:7px;
+	width:198px;
+	height:4px;
+	background:url(../img/boxTopPx.gif) #fff left top repeat-x;
+	z-index:9999 !important;
+}
+.JsDatePickBox .bottomWall
+{
+	position:absolute;
+	overflow:hidden;
+	bottom:-1px;
+	left:7px;
+	width:198px;
+	height:4px;
+	background:url(../img/boxTopPx.gif) #fff left top repeat-x;
+	z-index:9999 !important;
+}
+.JsDatePickBox .hiddenBoxLeftWall
+{
+	float:left;
+	width:0;
+	overflow:hidden;
+	overflow:hidden;
+	z-index:9999 !important;
+}
+.JsDatePickBox .hiddenBoxRightWall
+{
+	float:left;
+	width:0;
+	overflow:hidden;
+	overflow:hidden;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMain
+{
+	float:left;
+	background-color:#fff;
+	margin:0;
+	padding:15px 0 5px 0;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainStripped
+{
+	background:#fff;
+	border:none;
+	z-index:9999 !important;
+}
+.JsDatePickBox .tooltip
+{
+	height:12px;
+	line-height:11px;
+	overflow:hidden;
+	font-size:10px;
+	color:#666;
+	text-align:left;
+	padding:0;
+	margin:2px 0 2px 0;
+	z-index:9999 !important;
+}
+.JsDatePickBox .weekDaysRow
+{
+	height:12px;
+	overflow:hidden;
+	line-height:11px;
+	font-size:10px;
+	color:#666;
+	text-align:center;
+	padding:0;
+	margin:2px 0 0 0;
+	z-index:9999 !important;
+}
+.JsDatePickBox .weekDaysRow .weekDay
+{
+	float:left;
+	height:14px;
+	overflow:hidden;
+	width:24px;
+	margin:0 5px 0 0;
+	padding:0;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner
+{
+	background:#fff;
+	width:198px;
+	float:left;
+	margin:5px 0 0 0;
+	padding:0;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainCellsContainer
+{
+	background-color:#fff;
+	margin:0;
+	padding:0;
+	z-index:1000;
+}
+.JsDatePickBox .boxMainInner .controlsBar
+{
+	overflow:hidden;
+	height:20px;
+	position:relative;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .controlsBarText
+{
+	overflow:hidden;
+	height:20px;
+	line-height:20px;
+	color:#000;
+	font-size:12px;
+	text-align:center;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .monthForwardButton
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	right:22px;
+	background:url(../img/monthForward_normal.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .monthForwardButtonOver
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	right:22px;
+	background:url(../img/monthForward_over.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .monthForwardButtonDown
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	right:22px;
+	background:url(../img/monthForward_down.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .monthBackwardButton
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	left:22px;
+	background:url(../img/monthBackward_normal.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .monthBackwardButtonOver
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	left:22px;
+	background:url(../img/monthBackward_over.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .monthBackwardButtonDown
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	left:22px;
+	background:url(../img/monthBackward_down.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .yearForwardButton
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	right:0;
+	background:url(../img/yearForward_normal.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .yearForwardButtonOver
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	right:0;
+	background:url(../img/yearForward_over.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .yearForwardButtonDown
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	right:0;
+	background:url(../img/yearForward_down.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .yearBackwardButton
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:url(../img/yearBackward_normal.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .yearBackwardButtonOver
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:url(../img/yearBackward_over.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .yearBackwardButtonDown
+{
+	overflow:hidden;
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:url(../img/yearBackward_down.gif) left top no-repeat;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .skipDay
+{
+	cursor:default;
+	overflow:hidden;
+	width:24px;
+	height:25px;
+	float:left;
+	margin:4px 5px 0 0;
+	padding:0;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .dayNormal
+{
+	-khtml-user-select:none;
+	font-size:12px;
+	cursor:pointer;
+	overflow:hidden;
+	color:#4c4c4c;
+	width:24px;
+	height:25px;
+	float:left;
+	margin:4px 5px 0 0;
+	padding:0;
+	text-align:center;
+	line-height:25px;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .dayNormalToday
+{
+	-khtml-user-select:none;
+	font-size:12px;
+	cursor:pointer;
+	overflow:hidden;
+	color:#f40f0f;
+	font-weight:bold;
+	width:24px;
+	height:25px;
+	float:left;
+	margin:4px 5px 0 0;
+	padding:0;
+	text-align:center;
+	line-height:25px;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .dayDisabled
+{
+	-khtml-user-select:none;
+	cursor:default;
+	font-size:12px;
+	overflow:hidden;
+	color:#999;
+	width:24px;
+	height:25px;
+	float:left;
+	margin:4px 5px 0 0;
+	padding:0;
+	text-align:center;
+	line-height:25px;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .dayOver
+{
+	-khtml-user-select:none;
+	cursor:pointer;
+	font-size:12px;
+	overflow:hidden;
+	color:#4c4c4c;
+	width:24px;
+	height:25px;
+	float:left;
+	margin:4px 5px 0 0;
+	padding:0;
+	text-align:center;
+	line-height:25px;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .dayOverToday
+{
+	-khtml-user-select:none;
+	cursor:pointer;
+	font-size:12px;
+	overflow:hidden;
+	font-weight:bold;
+	color:#f40f0f;
+	width:24px;
+	height:25px;
+	float:left;
+	margin:4px 5px 0 0;
+	padding:0;
+	text-align:center;
+	line-height:25px;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .dayDown
+{
+	-khtml-user-select:none;
+	cursor:pointer;
+	font-size:12px;
+	overflow:hidden;
+	color:#F9F9F9;
+	width:24px;
+	height:25px;
+	float:left;
+	margin:4px 5px 0 0;
+	padding:0;
+	text-align:center;
+	line-height:25px;
+	z-index:9999 !important;
+}
+.JsDatePickBox .boxMainInner .dayDownToday
+{
+	-khtml-user-select:none;
+	cursor:pointer;
+	font-size:12px;
+	overflow:hidden;
+	color:#f40f0f;
+	font-weight:bold;
+	width:24px;
+	height:25px;
+	float:left;
+	margin:4px 5px 0 0;
+	padding:0;
+	text-align:center;
+	line-height:25px;
+	z-index:1000;
+}

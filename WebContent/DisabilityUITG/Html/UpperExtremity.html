@@ -1,0 +1,142 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet"  href="../css/sadarem_styles.css"/>
+    </head>
+    <body>
+
+        <p>Upper Extremity Calculation</p>
+        <table  border="0" align="center" cellspacing="1" cellpadding="0" class="inputform" width="90%">
+            <tr>
+                <th>Table Name</th>
+                <th>Field Names</th>
+                <th>Default</th>
+                <th>Range</th>
+                <th>Calculation(for both left & right)</th>
+                <th>Total Calculation(for both left & right)</th></tr>
+            <tr >
+                <td colspan="6">1.1 Arm Component</td></tr>
+            <tr >
+                <td>1.1.1Range of Motion </td>
+                <td>Shoulder joint<br>
+                    a)flexion extension<br>
+                    b)Rotation<br>
+                    c)Abduction-Adduction<br><br>
+                    Elbow joint<br>
+                    a)flexion extension<br>
+                    b)Supination-Pronation <br><br>
+                    Wrist joint<br>
+                    a) Dorsiflexion-palmar flexion<br>
+                    b) Radial- Ulnar deviation 
+                </td>
+
+                <td >
+                    220<br>180<br>180<br><br><br><br>150<br>180<br><br><br>160<br>55</td>
+                <td >(0-220)<br>(0-180)<br>(0-180)<br><br><br><br>(0-150)<br>(0-180)<br><br><br>(0-160)<br>(0-55)</td>
+                <td >x=(220-a)/220*100<br>y=(180-b)/180*100<br>z=(180-c)/180*100 <br><br><br>x=(150-a)/150*100<br>y=(180-b)/180*100<br><br><br>x=(160-a)/160*100<br>y=(55-b)/55*100</td>
+                <td >(x+y+z)/3*0.3 <br><br><br><br><br><br>(x+y)/2*0.3<br><br><br><br>(x+y)/2*0.3</td> </tr>
+            <tr >
+                <td colspan="6">Total ROM=Addition of All ROMRights+Addition of All ROMLefts</td></tr>
+
+            <tr >
+                <td >1.1.2Muscle Strength</td>
+                <td>Shoulder joint<br><br>
+                    Elbow joint<br><br>
+                    Wrist joint</td>
+                <td >5<br><br>5<br><br>5</td>
+                <td >(0-5)<br><br>(0-5)<br><br>(0-5)</td>
+                <td align="center">AllRights/6*0.3<br><br>AllRights/4*0.3<br><br>AllRights/4*0.3 </td><td></td>
+            <tr > 
+                <td colspan="6">Total MS=Addition of All MSRights+Addition of All MSLefts</td></tr>
+            <tr > <td></td>
+                <td align="left" colspan="4">Total Right(Rom Right,MS Right(Greater value is =a))</td><td align="center"> formula=a+(90-a)/90*b</td></tr>
+            <tr > <td></td>
+                <td align="left" colspan="4">Total Left(Rom Left,MS Left(Greater value is =a))</td><td align="center"> formula=a+(90-a)/90*b</td></tr>
+
+            <tr > <td></td>
+                <td align="left" colspan="4">Total(right,left(Greater value is =a))</td><td align="center"> formula=a+(90-a)/90*b</td></tr>
+            <tr >
+                <td align="left" colspan="5">1.1.3Coordinated Activities&nbsp;&nbsp;(Total Nine fields each field value=9%)</td><td align="center"> Adding all values</td></tr>
+
+            <tr >
+                <td colspan="5">Total Arm component(Total,coordinated activities(Greater value is =a))</td><td align="center"> formula=a+(90-a)/90*b</td></tr>
+
+            <tr >
+                <td  align="left" colspan="6">1.2 Hand Component</td></tr>
+
+            <tr >
+                <td >1.2.1Prehention </td>
+                <td align="left" colspan="3">
+                    Opposition each --2% <br>
+                    Lateral Pinch each--5%<br>
+                    Cylindrical Grasp each--3%<br>
+                    Spehirical Grasp--3%<br>
+                    Hook Grasp --5%<br></td>
+                <td >
+                    Adding All values</td>
+
+                <td >
+                    even if both are selected only one value has to consider</td></tr>
+
+            <tr >
+                <td >1.2.2 Sensation </td>
+                <td align="left" colspan="3">
+                    thumb---9% <br>
+                    index---6%<br>
+                    ring---5%<br>
+                    little--5%</td>
+                <td >
+                    Adding All values</td>
+
+                <td >
+                    even if both are selected only one value has to consider</td></tr>
+
+            <tr >
+                <td >1.2.3 Strength </td>
+                <td align="left" colspan="3">
+                    grip--20% <br>
+                    pinch--10%</td>
+                <td >
+                    Adding All values</td>
+
+                <td >
+                    even if both are selected only one value has to consider</td></tr>
+
+            <tr >
+                <td colspan="5">Total Hand Component(prehention,sensation,strenght)</td><td align="center"> prehention+sensation+strenght</td></tr>
+
+            <tr >
+                <td  align="center">1.3 Complications</td>
+                <td align="left" >Percentage of complicatios</td>
+                <td >0</td> <td colspan="2">(0-10)</td>
+                <td >first 5 total should be 10 .even if it exceed 10 we have to take 10 only </td></tr>
+
+            <tr >
+                <td  align="center">1.4 Shortening</td>
+                <td></td>
+                <td >0</td> <td colspan="2">(0-10)</td>
+                <td >1st one is nill and next one will be 2%</td></tr>
+            <tr >
+                <td colspan="5">Total Extra(complication,dominantinvolved,shortening)</td><td align="center"> complication+dominant involved+shortening</td></tr>
+
+
+            <tr >
+                <td colspan="5">UpperExtremity Total(Arm component, Hand component ,extra(Greater Value is =a))</td><td align="center"> formula=a+(90-a)/90*b</td></tr>
+
+        </table>
+        <br><br>
+        <table align="center">
+            <tr>
+                <td align="center">
+                    <center><a href="javascript:window.close()"> Close the Window</a></center>
+                </td>
+            </tr>
+
+        </table>
+    </body>
+</html> 

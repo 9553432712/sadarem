@@ -1,0 +1,52 @@
+<%@taglib uri="/WEB-INF/struts-html.tld" prefix="html"%>
+<%@taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%>
+<%@ page contentType="application/MyExcel.ms-excel" %>
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 
+Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+   
+
+<html:html>
+    <head>
+    
+     
+    </head>
+   
+    <body>
+  
+     
+        <table  border="1" align="center" cellspacing="1" cellpadding="5"  width="50%">
+            <tr align="center"> 
+            <td><b><font color="red">Excel sheet VillageLevel <%= session.getAttribute("SurgeryType") %></font></b></td></tr>  
+            <tr>
+            <td>
+                 <table  border="1" align="center" cellspacing="1" cellpadding="5"  width="50%" >
+            </tr><% int i=1;  %>
+                   <tr >
+                  <b>  
+                  
+              <td >S.NO</td> <td c>VillageName</td> <td >Village Level Count</td> 
+              </tr>            
+               <logic:iterate id="modify" name="arraylist" >
+                  <tr >
+                    
+                        <td><%=i++%></td>
+                        <td> <bean:write name="modify" property="villagename"/></td>
+                         <td><bean:write name="modify" property="villagecount"/></td>
+                      </td>
+                    </tr>
+                </logic:iterate>
+      </b>   
+            </table>
+            
+        </table>
+  
+ 
+    </body>
+    
+    <p>&nbsp;</p>
+  
+</html:html>
+            

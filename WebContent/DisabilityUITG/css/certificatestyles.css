@@ -1,0 +1,1441 @@
+/* Comments for the CSS (   body  ) */
+.body
+{
+background-color : #666666;
+margin           : 0px;
+padding          : 0px;
+margin-left      : 0px;
+padding-left     : 0px;
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 16px;
+}
+/************************* label names for all pages *******************/
+
+.Cert-label
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 13px;
+font-weight      : Normal;
+color            : Black;
+}
+
+/************************* label for AlertMessages *******************/
+.alertMessage
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 13px;
+font-weight      : bold;
+ color           : white;
+}
+
+.newsMessage
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 10px;
+font-weight      : bold;
+color            : Black;
+}
+
+/************************* label for Id cards *******************/
+.idcardLabels
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 9px;
+font-weight      : bold;
+color            : Black
+
+}
+
+
+.idcardLabelss
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 8px;
+font-weight      : bold;
+color            : Black
+
+}
+.loginName
+{
+ font-family      : Verdana;
+ font-size        : 11px;
+ color            : #666666;
+ font-weight      : Normal;
+}
+.userName
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 13px;
+font-weight      : Normal;
+color            :#FF0000;
+}
+.Note
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 13px;
+font-weight      : Normal;
+color            :#FF0000;
+font-style       :italic;
+}
+/********************* 1st table of the page ******************************/
+.heading
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 15px;
+font-weight      : bold;
+ color           : #005BAA;
+}
+
+/********************* 1st table of the page for form 03-04-2010 ******************************/
+.heading1
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 17px;
+font-weight      : bold;
+color            : #8A0808;
+}
+/********************* 1st table of the page for form 03-04-2010 ******************************/
+.innerTable {
+BORDER-BOTTOM    : #79b7eb 3px solid;
+BORDER-RIGHT     : #79b7eb 3px solid;
+BORDER-TOP       : #79b7eb 3px solid;
+BORDER-LEFT      : #79b7eb 3px solid;
+background-color : white ;
+padding          : 5px   ;
+
+}
+/********************* 1st table of the page for form 03-04-2010 ******************************/
+.innerTable1 {
+        BORDER-BOTTOM: #79b7eb 3px solid;
+	BORDER-RIGHT : #79b7eb 3px solid;
+
+	BORDER-LEFT  : #79b7eb 3px solid;
+background-color : white ;
+padding          : 5px   ;
+
+}
+
+.subHeading
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 18px;
+font-weight      : bold;
+color            : #FF9900;
+}
+.labelGreen
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 20px;
+font-weight      : bold;
+color            : Green;
+}
+
+.labelGreen15px
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 15px;
+font-weight      : bold;
+color            : Green;
+}
+
+.labelGreen10px
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 10px;
+font-weight      : bold;
+color            : Green;
+}
+.labelBlue
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 12px;
+font-weight      : Normal;
+color            : Blue;
+}
+
+
+.labelBlue1
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 10px;
+font-weight      : bold;
+color            : Blue;
+}
+.labelAppelate
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 10px;
+font-weight      : bold;
+color            : rgb(211, 59, 83);	
+	
+}
+.columnHeight10
+{
+  height : 10px;
+}
+.columnHeight11
+{
+  height : 12px;
+}
+.columnHeight15
+{
+  height : 15px;
+}
+.columnHeight20
+{
+  height : 20px;
+}
+.columnHeight12
+{
+  height : 30px;
+}
+.table_one {
+background-color : #F2f0e6;
+border-style     : none  ;
+border-width     : 0px   ;
+padding          : 0px   ;
+margin           : 0px   ;
+width            : 95%   ;
+}
+.innerTable {
+BORDER-BOTTOM    : #999999 1px solid;
+BORDER-RIGHT     : #999999 1px solid;
+BORDER-TOP       : #999999 1px solid;
+BORDER-LEFT      : #999999 1px solid;
+background-color : white ;
+padding          : 5px   ;
+        
+}
+
+.innerTable1 {
+        BORDER-BOTTOM: #999999 1px solid;
+	BORDER-RIGHT : #999999 1px solid;
+	
+	BORDER-LEFT  : #999999 1px solid;
+        background-color : white ;
+        padding          : 5px   ;
+
+}
+/********************* 1st table of the page for form 03-04-2010 ******************************/
+.button
+{
+border      : 1px solid #000066;
+font-size   : 11px;
+font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+background  : #EBEDEB;
+color       : black;
+}
+
+.innerTable1white {
+        BORDER-BOTTOM: #79b7eb 3px solid;
+	BORDER-RIGHT : #79b7eb 3px solid;
+
+	BORDER-LEFT  : #79b7eb 3px solid;
+background-color : white ;
+padding          : 5px   ;
+
+}
+
+/********************* 2nd table of the page ******************************/
+
+.table_two {
+
+height: 22%;
+background-color : #000066; /* used for skin */
+width: 100%
+}
+
+/********************* 3rd table of the page ******************************/
+
+.table_three {
+
+height: 5%;
+width: 100%
+}
+
+/********************* 4th table of the page ******************************/
+
+.table_railway {
+
+        BORDER-BOTTOM: green 4px solid;
+	BORDER-RIGHT : green 4px solid;
+	BORDER-TOP   : green 4px solid;
+	BORDER-LEFT  : green 4px solid;
+        width        : 100%;
+
+}
+
+/********************* 4th table of the page ******************************/
+
+.table_four {
+
+        BORDER-BOTTOM: green 4px solid;
+	BORDER-RIGHT : green 4px solid;
+	BORDER-TOP   : green 4px solid;
+	BORDER-LEFT  : green 4px solid;
+        width        : 95%;
+
+}
+
+/********************* 5th table of the page ******************************/
+
+.table_five {
+
+        BORDER-BOTTOM: green 4px solid;
+	BORDER-RIGHT : green 4px solid;
+	BORDER-TOP   : green 4px solid;
+	BORDER-LEFT  : green 4px solid;
+        width        : 85%;
+
+}
+
+
+
+.table_temparory {
+
+        BORDER-BOTTOM: blue 4px solid;
+	BORDER-RIGHT : blue 4px solid;
+	BORDER-TOP   : blue 4px solid;
+	BORDER-LEFT  : blue 4px solid;
+        width        : 95%;
+
+}
+
+.table_appellate {
+
+        BORDER-BOTTOM: orange 4px solid;
+	BORDER-RIGHT : orange 4px solid;
+	BORDER-TOP   : orange 4px solid;
+	BORDER-LEFT  : orange 4px solid;
+        width        : 95%;
+
+}
+
+
+/********************* Main table of the page ******************************/
+
+.table_content {
+
+height: 75%;
+background-color : #FBFDFF; /* used for skin */
+width: 100%
+
+}
+
+/********************* buttons table of the page ******************************/
+
+.table_buttons {
+
+background-color : #FBFDFF; /* used for skin */
+}
+
+/********************* buttons table of the page ******************************/
+
+.table_copyright_line {
+
+background-color : #D5DAE6; /* used for skin */
+}
+
+
+.textbox
+{
+font-family  : verdana,helvetica,arial,sans-serif;
+font-size    : 12px;
+font-style   : normal;
+font-variant : normal;
+font-weight  : normal;
+color        : black;
+
+}
+/* Comments for the CSS (   textHeader1  ) */
+.textHeader1 {
+	font-family : Verdana;
+	font-size : 12px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color : red;
+}
+
+
+.tex2 {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : red;
+}
+
+
+/* Comments for the CSS (   content1  ) */
+.content1 {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : Black;
+}
+
+/* mandatory fields */
+.mandatory {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 9px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : Black;
+}
+
+/* Comments for the CSS (   textarea  ) */
+.textarea
+{
+font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	height : 80%;
+	width : 200%;
+	/*border-top:1px solid black;border-right:1px solid black;
+	border-left:1px solid black;border-bottom:1px solid black;*/
+}
+
+.button
+{
+border      : 1px solid #000066;
+font-size   : 11px;
+font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+background  : #EBEDEB;
+color       : black;
+}
+
+/* Comments for the CSS (     ) */
+A:ACTIVE {
+	text-decoration: none;
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color: blue;
+
+}
+A:HOVER {
+	text-decoration: underline;
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color:red;
+}
+A:LINK {
+	text-decoration: none;
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color: blue;
+}
+ A:VISITED {
+	text-decoration: none;
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color: blue;
+}
+
+.index_login_txt {
+	font-family: verdana,helvetica,arial,sans-serif;
+	font-size : 10px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : black;
+}
+
+.footer_copyright_index {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 9px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : #818181;
+
+}
+
+.lgn_tbl
+{
+
+	border-top:0px solid #A5B8D9;border-right:1px solid #A5B8D9;
+	border-left:1px solid #A5B8D9;border-bottom:1px solid #A5B8D9;
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	width : 40%;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	BACKGROUND-COLOR: #F5F8FD;/* #FEFDFD */
+	color : Black
+}
+
+.lgn_tbl_content1
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+    BACKGROUND-IMAGE: url(../images/login_top_bg.jpg);
+	color : Black
+}
+
+.lgn_tbl_small
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : Black
+}
+
+.lgn_button
+{
+
+    HEIGHT: 22px;
+	border-top:0px solid #A5B8D9;border-right:1px solid #A5B8D9;
+	border-left:1px solid #A5B8D9;border-bottom:0px solid #A5B8D9;
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+        BACKGROUND-IMAGE: url(../images/login_top_bg.jpg);
+	color : Black
+}
+
+
+.lgn_tbl_small2
+{
+
+	PADDING-RIGHT: 15px;
+	PADDING-LEFT: 15px;
+	PADDING-BOTTOM: 15px;
+	PADDING-TOP: 15px;
+	TEXT-ALIGN: justify;
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : Black
+}
+
+/* styles used in SelectRole.asp */
+.lgn_tbl2
+{
+
+
+	/*border-top:1px solid #A5B8D9;border-right:1px solid #A5B8D9;
+	border-left:1px solid #A5B8D9;border-bottom:1px solid #A5B8D9;*/
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	BACKGROUND-COLOR: #F5F8FD;/* #FEFDFD */
+	color : Black
+}
+
+.lgn_tbl_content12
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 12px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+        BACKGROUND-IMAGE: url(../images/login_top_bg.jpg); /* used for skin */
+	color : Black
+}
+
+.ifrm
+{
+        scrollbar-highlight-color: #DDDDDD;
+        scrollbar-shadow-color:#DDDDDD;
+	scrollbar-arrow-color:#170088;
+        scrollbar-base-color:#170088;
+        scrollbar-face-color:#DDDDDD;
+	border-top:0px solid black;border-right:0px solid black;
+	border-left:0px solid black;border-bottom:0px solid black;
+}
+
+/* Iframe Styles : */
+
+.tbl_bg
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 10px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #6084B0;/*#C0C8D4*/
+	color : Black
+}
+
+.tbl_bg_content
+{
+
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 9px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : white;
+	color : Black
+}
+
+
+
+.tbl_bg_content_hdr
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 9px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #C0C8D4; /* used for skin */
+	color : Black
+}
+
+/**************************************** STYLES USED IN FORMS PAGES **********************************/
+
+.navigation_cnt
+{
+	height : 20%;
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 9px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : Black
+}
+
+.user_display_cnt
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : Black
+}
+
+.tbl_bg2
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 10px;
+font-style       : normal;
+font-variant     : normal;
+font-weight      : normal;
+background-color : #A5B8D9;
+color            : Black
+}
+.tbl_bg2_content_hdr_new
+{
+
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #EAF1FC; /* (used for skin)*/
+	color : Black
+}
+.tbl_bg3
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 10px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #A5B8D9; /* #C0C8D4 (used for skin)*/
+	color : green
+}
+.tbl_bg2_content
+{
+
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #F5F8FD; /* (used for skin)*/
+	color : Black
+}
+
+/******************* Added newly by kishore for the header *************************************/
+
+
+
+
+.tbl_bg2_content_hdr
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 16px;
+font-style       : bold;
+font-variant     : bold;
+font-weight      : bold;
+BACKGROUND-IMAGE : url(../images/light_blue/hdr_blue.jpg);
+color            : Black
+}
+
+
+.txtfld_bg2
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	height : 20;
+	TEXT-ALIGN: left;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	/*background-color : #F5F8FD;#C0C8D4
+	border-top:0px solid #A5B8D9;border-right:0px solid #A5B8D9;
+	border-left:0px solid #A5B8D9;border-bottom:0px solid #A5B8D9;*/
+	color : Black
+}
+
+.txtfld_bg3
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	height : 20;
+	TEXT-ALIGN: left;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	/*background-color : #F5F8FD;#C0C8D4
+	border-top:0px solid #A5B8D9;border-right:0px solid #A5B8D9;
+	border-left:0px solid #A5B8D9;border-bottom:0px solid #A5B8D9;*/
+	color : Black
+}
+
+.listbox_bg2
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	height : 23;
+	TEXT-ALIGN: left;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : white;/*#C0C8D4*/
+	border-top:0px solid #A5B8D9;border-right:0px solid #A5B8D9;
+	border-left:0px solid #A5B8D9;border-bottom:0px solid #A5B8D9;
+	color : Black
+}
+
+.button_bg2
+{
+	DISPLAY: block;
+    HEIGHT: 23px;
+	TEXT-ALIGN: center;
+
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : bold;
+	font-weight : bold;
+	background-color : #D9E4F6; /* (used for skin)*/
+	border-top:1px solid #A5B8D9;border-right:1px solid #A5B8D9;
+	border-left:1px solid #A5B8D9;border-bottom:1px solid #A5B8D9;
+/*	COLOR: black;
+
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px;
+	PADDING-BOTTOM: 2px;
+	PADDING-TOP: 2px;
+	TEXT-DECORATION: none
+*/
+
+    BACKGROUND-IMAGE: url(../images/light_blue/button_bg.jpg); /* (used for skin)*/
+
+
+}
+
+.button_arrows
+{
+	DISPLAY: block;
+    HEIGHT: 23px;
+	width :50px;
+	TEXT-ALIGN: center;
+
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : bold;
+	font-weight : bold;
+	background-color : #D9E4F6; /* (used for skin)*/
+	border-top:1px solid #A5B8D9;border-right:1px solid #A5B8D9;
+	border-left:1px solid #A5B8D9;border-bottom:1px solid #A5B8D9;
+/*	COLOR: black;
+
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px;
+	PADDING-BOTTOM: 2px;
+	PADDING-TOP: 2px;
+	TEXT-DECORATION: none
+*/
+
+    BACKGROUND-IMAGE: url(../images/button_bg.jpg); /* (used for skin)*/
+
+
+}
+
+.pg_header
+{
+	DISPLAY: block;
+    HEIGHT: 23px;
+	TEXT-ALIGN: left;
+
+	font-family : Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 15px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+
+	border-top:0px solid #A5B8D9;border-right:0px solid #A5B8D9;
+	border-left:0px solid #A5B8D9;border-bottom:1px solid #A5B8D9;
+
+	COLOR: black;
+
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px;
+	PADDING-BOTTOM: 2px;
+	PADDING-TOP: 2px;
+	TEXT-DECORATION: none
+}
+
+/* styles used in the CCRP Module -- BEGIN ---- */
+
+.tbl_bg2_content_active
+{
+
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #FFFAF5; /* (used for skin)*/
+	color : Black
+}
+
+.tbl_bg2_content_inactive
+{
+
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #FFFFFB; /* (used for skin)*/
+	color : Black
+}
+/* styles used in the CCRP Module -- END ---- */
+
+
+.txtfld_bg2_readonly
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	height : 20%;
+	TEXT-ALIGN: left;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #DEDBD8;
+	/*border-top:0px solid #A5B8D9;border-right:0px solid #A5B8D9;
+	border-left:0px solid #A5B8D9;border-bottom:0px solid #A5B8D9;*/
+	color : Black
+}
+
+/* Comments for the CSS (   Used in the ERROR Page  ) */
+.exception_txt {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : Black;
+}
+
+/* Comments for the CSS (   Used in the ERROR Page  ) */
+.exception_txt_bold {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 13px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color : Black;
+}
+
+/*******************************************************************************
+********************************************************************************
+****************** Styles for the PORTLETS (BEGIN)******************************
+********************************************************************************
+********************************************************************************/
+
+.clWin
+{
+position:absolute;
+z-index:2;
+visibility:hidden;
+overflow:hidden;
+background-color:cyan
+}
+
+.clWindow
+{
+position:absolute;
+background-color:cyan;
+overflow:hidden;
+z-index:15;
+width:200
+}
+
+.clWinHead
+{
+position:absolute;
+width:200;
+top:0;
+PADDING-RIGHT: 2px;
+PADDING-LEFT: 6px;
+PADDING-BOTTOM: 2px;
+PADDING-TOP: 4px;
+color:black;
+font-family:arial,arial,helvetica;
+font-size:11px;
+
+font-weight:bold;
+
+/* background-color:transparent */
+ BACKGROUND-IMAGE: url(../portlet_img_blue/portlet_header.jpg); /* Used for Skins */
+}
+
+.clText
+{
+position:absolute;
+z-index:50;
+font-family:arial,helvetica;
+font-size:11px;
+PADDING-RIGHT: 2px;
+PADDING-LEFT: 4px;
+PADDING-BOTTOM: 4px;
+PADDING-TOP: 3px;
+background-color:transparent
+}
+.clWinResize
+{
+position:absolute;
+z-index:30;
+width:30;
+height:30;
+clip:rect(0,30,30,0);
+background-image:url(images/resize.gif);
+layer-background-image:url(resize.gif);
+}
+
+.clUp{
+position:absolute;
+width:12;
+height:12;
+z-index:60;}
+
+.clDown{
+position:absolute;
+width:12;
+height:12;
+z-index:60;}
+
+.clWinButtons{
+position:absolute;
+PADDING-TOP: 2px;
+font-family:arial,helvetica;
+font-size:12px}
+
+
+.portlet_tbl_bg
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 10px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #6699CC; /* Used for Portlet Skins (border of the table)*/
+	color : Black
+}
+
+.portlet_tbl_bg_content_hdr
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 9px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #DEE7F6; /*Used for Portlet Skins*/
+	color : Black
+}
+
+.portlet_tbl_bg_content
+{
+
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 9px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : white; /*Used for Portlet Skins*/
+	color : Black
+}
+
+/*******************************************************************************
+********************************************************************************
+****************** Styles for the PORTLETS (END)******************************
+********************************************************************************
+********************************************************************************/
+
+
+
+
+/*******************************************************************************
+********************************************************************************
+********************************************************************************
+New Styles for TABS in EDB Application (BEGIN)
+/*******************************************************************************
+********************************************************************************
+********************************************************************************/
+
+.tabs {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color : black;
+/*	background-color : #73B2D6; */
+	height: 25;
+	border-top:0px solid black;border-right:0px solid black;
+	border-left:0px solid black;border-bottom:0px solid black;
+	BACKGROUND-IMAGE: url(../portlet_img_blue/tabs_bg.jpg)
+}
+
+.tabs_selected {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color : black;
+	background-color : #73B2D6; /* (used for skin)*/
+	height: 25;
+	border-top:0px solid black;border-right:0px solid black;
+	border-left:0px solid black;border-bottom:0px solid black;
+	BACKGROUND-IMAGE: url(../portlet_img_blue/tabs_bg_selected.jpg)
+}
+
+.tabs_right_img {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color : black;
+	background-color : #73B2D6; /* (used for skin)*/
+	height: 25;
+	border-top:0px solid black;border-right:0px solid black;
+	border-left:0px solid black;border-bottom:0px solid black;
+	BACKGROUND-IMAGE: url(../portlet_img_blue/tab_right_light.jpg)
+}
+/* tabs link properties */
+
+A.tab:ACTIVE {
+	text-decoration: none;
+	font-family : Verdana;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color: black;
+	TEXT-DECORATION: none
+
+}
+A.tab:HOVER {
+	text-decoration: underline;
+	font-family : Verdana;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color:black;
+	TEXT-DECORATION: none
+}
+A.tab:LINK {
+	text-decoration: none;
+	font-family : Verdana;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color: black;
+	TEXT-DECORATION: none
+}
+ A.tab:VISITED {
+	text-decoration: none;
+	font-family : Verdana;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color: black;
+	TEXT-DECORATION: none
+}
+
+/************************************************************************************************/
+/************************************************************************************************/
+Styles for the Left Menu in EDB
+/************************************************************************************************/
+/************************************************************************************************/
+
+.body_menu_edb
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #F5F8FD
+
+}
+.tbl_menu_edb
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #99C2F0
+
+}
+.tr_menu_edb
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #6699CC
+
+}
+
+/* used for the TREE */
+
+.left {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	color : black;
+	text-decoration : none;
+	display : block;
+	padding-top : 0pt;
+	white-space : normal;
+	border-top-width : 0;
+	margin-top : 0pt;
+	background-color : #99C2F0
+}
+.subleft {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	color : black;
+	text-decoration : none;
+	display : block;
+	padding-top : 0pt;
+	white-space : normal;
+	border-top-width : 0;
+	margin-top : 0pt;
+	background-color : #E7EFFA
+
+}
+
+.txt_menu_edb
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : red
+
+}
+.txt2_menu_edb
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : blue
+
+}
+
+/*******************************************************************************
+********************************************************************************
+********************************************************************************
+New Styles for TABS in EDB Application (END)
+/*******************************************************************************
+********************************************************************************
+********************************************************************************/
+
+
+
+/*******************************************************************************
+********************************************************************************
+********************************************************************************
+New Styles for TABS in EDB Application (BEGIN)
+/*******************************************************************************
+********************************************************************************
+********************************************************************************/
+
+.tabs {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color : black;
+/*	background-color : #73B2D6; */
+	height: 25;
+	border-top:0px solid black;border-right:0px solid black;
+	border-left:0px solid black;border-bottom:0px solid black;
+	BACKGROUND-IMAGE: url(../images/portlet_img_blue/blue_tabs_bg.jpg)
+}
+
+.tabs_selected {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color : black;
+	background-color : #73B2D6; /* (used for skin)*/
+	height: 25;
+	border-top:0px solid black;border-right:0px solid black;
+	border-left:0px solid black;border-bottom:0px solid black;
+	BACKGROUND-IMAGE: url(../images/portlet_img_blue/blue_tabs_bg_selected.jpg)
+}
+
+.tabs_right_img {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color : black;
+	background-color : #73B2D6; /* (used for skin)*/
+	height: 25;
+	border-top:0px solid black;border-right:0px solid black;
+	border-left:0px solid black;border-bottom:0px solid black;
+	BACKGROUND-IMAGE: url(../images/portlet_img_blue/blue_tab_right_light.jpg)
+}
+/* tabs link properties */
+
+A.tab:ACTIVE {
+	text-decoration: none;
+	font-family : Verdana;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color: black;
+	TEXT-DECORATION: none
+
+}
+A.tab:HOVER {
+	text-decoration: underline;
+	font-family : Verdana;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color:black;
+	TEXT-DECORATION: none
+}
+A.tab:LINK {
+	text-decoration: none;
+	font-family : Verdana;
+	font-size : 11px;
+	font-style : bold;
+	font-variant : bold;
+	font-weight : bold;
+	color: black;
+	TEXT-DECORATION: none
+}
+ A.tab:VISITED {
+	text-decoration: none;
+	font-family : Verdana;
+	font-size : 11px;
+	font-style : bold;
+	font-variant :bold;
+	font-weight : bold;
+	color: black;
+	TEXT-DECORATION: none
+}
+
+/************************************************************************************************/
+/************************************************************************************************/
+Styles for the Left Menu in EDB
+/************************************************************************************************/
+/************************************************************************************************/
+
+.body_menu_edb
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #F5F8FD
+
+}
+.tbl_menu_edb
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #99C2F0
+
+}
+.tr_menu_edb
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	background-color : #6699CC
+
+}
+
+/* used for the TREE */
+
+.left {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	color : black;
+	text-decoration : none;
+	display : block;
+	padding-top : 0pt;
+	white-space : normal;
+	border-top-width : 0;
+	margin-top : 0pt;
+	background-color : #99C2F0
+}
+.subleft {
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	color : black;
+	text-decoration : none;
+	display : block;
+	padding-top : 0pt;
+	white-space : normal;
+	border-top-width : 0;
+	margin-top : 0pt;
+	background-color : #E7EFFA
+
+}
+
+.txt_menu_edb
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : red
+
+}
+.txt2_menu_edb
+{
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : blue
+
+}
+
+/*******************************************************************************
+********************************************************************************
+********************************************************************************
+New Styles for TABS in EDB Application (END)
+/*******************************************************************************
+********************************************************************************
+********************************************************************************/
+
+
+
+.top_links_txt
+{
+
+	font-family : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+	font-size : 11px;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;
+	color : Black
+}
+
+/************************* label names for all pages *******************/
+
+.messagelablel
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 13px;
+font-weight      : Normal;
+color            : red;
+}
+
+.validationmessage
+{
+font-family      : Verdana,Helvetica,Arial,Geneva,Swiss,sunsans-Regular;
+font-size        : 13px;
+font-weight      : Normal;
+color            : black;
+}
+.login_button {	
+			background: url(images/login_button.gif) 19px;
+			padding: 1px 3px 0 3px;
+			height: 19px; padding-left:10px; padding-right:10px;
+			font-weight: bold;
+			font: bold 11px Arial, Helvetica, sans-serif;
+			border:1px #666666 solid;	
+}
+.formbg {
+   font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#333333; border-left:1px; border-left-color:#999999; border-left-style:solid; border-bottom:1px; border-bottom-color:#999999; border-bottom-style:solid; padding:3px; padding-left:6px; background-color:#e5e5e5;
+}
+.formaltbg {
+   font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#333333; border-left:1px; border-left-color:#999999; border-left-style:solid; border-bottom:1px; border-bottom-color:#999999; border-bottom-style:solid; padding:3px; padding-left:6px; background-color:#ffffff;
+}
+.formhdbg {
+   font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#ffffff; border-left:1px; border-left-color:#c0ac88; border-left-style:solid; border-bottom:1px; border-bottom-color:#c0ac88; border-bottom-style:solid; padding:3px; padding-left:6px; background:#326fb2; font-weight:600; line-height:18px;
+}
+#gridbg{background-color:#ffffff;font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal;text-align: left;text-indent: 7px; padding:2px;}
+.in{border:1px solid #A4A4A4; padding-left:10px; font-size:12px;font-weight:normal;}

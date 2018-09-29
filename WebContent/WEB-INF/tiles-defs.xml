@@ -1,0 +1,3272 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+"http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<tiles-definitions>
+
+    <definition name="OuterLayout" page="/DisabilityUITG/Tiles/OuterLayout.jsp">
+        <put name="header" value="/DisabilityUITG/Scripts/Header.jsp" />
+        <put name="footer" value="/DisabilityUITG/Scripts/LoginFooter.jsp" />
+    </definition>
+    <definition name="WithOutHeaderFooter" page="/DisabilityUITG/Tiles/WithOutHeaderFooter.jsp">
+    </definition>
+    <definition name="WithOutHeader" page="/DisabilityUITG/Tiles/WithOutHeader.jsp">
+        <put name="footer" value="/DisabilityUITG/Scripts/LoginFooter.jsp" />
+    </definition>
+    <definition name="PrintLayout" page="/DisabilityUITG/Tiles/PrintLayout.jsp">
+        <put name="footer" value="/DisabilityUITG/Scripts/LoginFooter.jsp" />
+    </definition>
+
+    <definition name="LoginLayout" page="/DisabilityUITG/Tiles/LoginLayout.jsp">
+        <put name="menu" value="/DisabilityUITG/Scripts/Menu.jsp" />
+        <put name="header" value="/DisabilityUITG/Scripts/LoginHeader.jsp" />
+        <put name="footer" value="/DisabilityUITG/Scripts/LoginFooter.jsp" />
+    </definition>
+
+    <definition name="IssueTrackingLayout" page="/DisabilityUITG/Tiles/IssueTrackingLayout.jsp">
+        <put name="menu" value="/DisabilityUITG/Scripts/Menu.jsp" />
+        <put name="header" value="/DisabilityUITG/Scripts/LoginHeader.jsp" />
+        <put name="basicdtls" value="" />
+        <put name="footer" value="/DisabilityUITG/Scripts/LoginFooter.jsp" /> 
+    </definition>
+
+    <definition name="LoginPageLayout" page="/DisabilityUITG/Tiles/LoginPageLayout.jsp">
+        <put name="header" value="/DisabilityUITG/Scripts/Header.jsp" />
+        <put name="footer" value="/DisabilityUITG/Scripts/LoginFooter.jsp" />
+    </definition>
+
+    <definition name="LoginWithoutMenuLayout" page="/DisabilityUITG/Tiles/LoginLayoutWithoutMenu.jsp">
+
+        <put name="header" value="/DisabilityUITG/Scripts/LoginHeader.jsp" />
+        <put name="footer" value="/DisabilityUITG/Scripts/LoginFooter.jsp" />
+    </definition>
+    
+    <definition name="IssueTrackingLayoutiframe" page="/DisabilityUITG/Tiles/IssueTrackingLayout.jsp">
+        <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+    </definition>
+    
+    
+    <definition name="sadaremdefaulttile" extends="OuterLayout" >
+        <put name="body" value="/common/defaulthomepage.jsp"></put>
+    </definition>
+    
+    <!-- Analysis Start-->
+
+    <!-- oldTiles start -->
+
+    <definition name="DisabilityTile" page="/DisabilityUITG/tiles/DisabilityLayout.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp" />
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+    </definition>
+    <definition name="DisabilityTilePrint" page="/DisabilityUITG/Tiles/DisabilityLayoutPrint.jsp">
+        <put name="header" value="/DisabilityUITG/Tiles/FormatsHeaderPrint.jsp" />
+
+    </definition>
+
+    <!-- oldTiles end -->
+
+    <definition name="Logintile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/LoginPage.jsp"></put>
+    </definition>
+
+    <!-- Niramaya Reports start -->
+    <definition name="AnalysisTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/WebsiteAnalysisCommon1.jsp"></put>
+    </definition>
+    <definition name="NiramayaDistrictReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/NiramayaDistrictReport.jsp"></put>
+    </definition>
+
+    <definition name="rationcardReport" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/rationCardReport.jsp"></put>
+    </definition>
+    <definition name="rationCardMemberDetails" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/rationCardMemberDetails.jsp"></put>
+    </definition>
+    <definition name="NiramayaMandalReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/NiramayaMandalReport.jsp"></put>
+    </definition>
+    <definition name="NiramayaVillageReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/NiramayaVillageReport.jsp"></put>
+    </definition>
+    <definition name="NiramayaHabitationReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/NiramayaHabitationReport.jsp"></put>
+    </definition>
+    <definition name="NiramayaPersonalReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/NiramayaPersonalReport.jsp"></put>
+    </definition>
+    <definition name="ViewPhotoTile" extends="WithOutHeaderFooter">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/ViewPhoto.jsp"></put>
+    </definition>
+    <!-- Niramaya Reports End -->
+
+ <!-- Spacific Needs Start-->
+    <definition name="SpecificNeedsReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/WebsiteAnalysisReport.jsp"></put>
+    </definition>
+
+    <definition name="MedicalInterventionOHTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/MedicalInterventionOH.jsp"></put>
+    </definition>
+
+    <definition name="MedicalInterventionOHPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/MedicalInterventionOHPrint.jsp"></put>
+    </definition>
+    <definition name="AnalysisPersonalReportTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AnalysisPersonalReport.jsp"></put>
+    </definition>
+    <definition name="SurgeryPersonalReportTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/SurgeryPersonalReport.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesProthosisTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesProthosis.jsp"></put>
+    </definition>
+
+    <definition name="AssistiveDevicesProthosisPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesProthosisPrint.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesOrthosisTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesOrthosis.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesOrthosisPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesOrthosisPrint.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesWalkingAidsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesWalkingAids.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesWalkingAidsPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesWalkingAidsPrint.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesMobilityTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesMobility.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesMobilityPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesMobilityPrint.jsp"></put>
+    </definition>
+
+    <definition name="AssistiveDevicesADLEquipmentsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesADLEquipments.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesADLEquipmentsPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesADLEquipmentsPrint.jsp"></put>
+    </definition>
+    <definition name="OtherNeedsOHTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/OtherNeedsOH.jsp"></put>
+    </definition>
+    <definition name="OtherNeedsOHPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/OtherNeedsOHPrint.jsp"></put>
+    </definition>
+
+    <definition name="MedicalInterventionVITile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/MedicalInterventionVI.jsp"></put>
+    </definition>
+    <definition name="MedicalInterventionVIPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/MedicalInterventionVIPrint.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesVITile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesVI.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesVIPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesVIPrint.jsp"></put>
+    </definition>
+
+    <definition name="OtherNeedsVITile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/OtherNeedsVI.jsp"></put>
+    </definition>
+    <definition name="OtherNeedsVIPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/OtherNeedsVIPrint.jsp"></put>
+    </definition>
+
+    <definition name="MedicalInterventionHITile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/MedicalInterventionHI.jsp"></put>
+    </definition>
+    <definition name="MedicalInterventionHIPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/MedicalInterventionHIPrint.jsp"></put>
+    </definition>
+
+    <definition name="AssistiveDevicesHITile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesHI.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesHIPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesHIPrint.jsp"></put>
+    </definition>
+
+    <definition name="OtherNeedsHITile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/OtherNeedsHI.jsp"></put>
+    </definition>
+    <definition name="OtherNeedsHIPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/OtherNeedsHIPrint.jsp"></put>
+    </definition>
+    <definition name="MedicalInterventionMRTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/MedicalInterventionMR.jsp"></put>
+    </definition>
+    <definition name="MedicalInterventionMRPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/MedicalInterventionMRPrint.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesMRTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesMR.jsp"></put>
+    </definition>
+    <definition name="AssistiveDevicesMRPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AssistiveDevicesMRPrint.jsp"></put>
+    </definition>
+    <definition name="OtherNeedsMRTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/OtherNeedsMR.jsp"></put>
+    </definition>
+    <definition name="OtherNeedsMRPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/OtherNeedsMRPrint.jsp"></put>
+    </definition>
+
+    <definition name="MedicalInterventionMITile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/MedicalInterventionMI.jsp"></put>
+    </definition>
+    <definition name="MedicalInterventionMIPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/MedicalInterventionMIPrint.jsp"></put>
+    </definition>
+
+    <definition name="OtherNeedsMITile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/OtherNeedsMI.jsp"></put>
+    </definition>
+    <definition name="OtherNeedsMIPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/OtherNeedsMIPrint.jsp"></put>
+    </definition>
+
+    <definition name="AllFunctionalNeedOHTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/AllFunctionalNeedOH.jsp"></put>
+    </definition>
+
+
+    <!-- Spacific Needs End -->
+     <!-- GeneralNeeds Start -->
+    <definition name="GeneralNeedsReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/WebsiteGeneralNeedsReport.jsp"></put>
+    </definition>
+    <definition name="GeneralNeedsReportPrintTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/WebsiteGeneralNeedsReportPrint.jsp"></put>
+    </definition>
+    <definition name="GeneralNeedsCommonTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/GeneralNeedsCommon.jsp"></put>
+    </definition>
+    <definition name="GeneralNeedsMRTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/GeneralNeedsMR.jsp"></put>
+    </definition>
+    <definition name="GeneralNeedsMITile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/GeneralNeedsMI.jsp"></put>
+    </definition>
+    <definition name="GeneralNeedsMultipleTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/WithOutHeader/GeneralNeedsMultiple.jsp"></put>
+    </definition>
+
+    <definition name="GeneralNeedsPersonalReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/GeneralNeedsPersonalReport.jsp"></put>
+    </definition>
+    <definition name="GeneralNeedsCommonPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/GeneralNeedsCommonPrint.jsp"></put>
+    </definition>
+
+    <definition name="GeneralNeedsMRPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/GeneralNeedsMRPrint.jsp"></put>
+    </definition>
+    <definition name="GeneralNeedsMIPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/GeneralNeedsMIPrint.jsp"></put>
+    </definition>
+    <definition name="GeneralNeedsMultiplePrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/GeneralNeedsMultiplePrint.jsp"></put>
+    </definition>
+
+    <!-- GeneralNeeds End -->
+
+    <definition name="existingRationCard" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/NonPensioners/ExistingRationcardNumber.jsp"></put>
+    </definition>
+    <definition name="PartARationCardDetailsInserttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/NonPensioners/insertRationCardPersonalDetails.jsp"></put>
+    </definition>
+    <!-- All Disabilities Start -->
+    <definition name="TotalReports_1Tile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/TotalReports_1.jsp"></put>
+    </definition>
+
+    <definition name="TotalReport_1Tile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/TotalReport_1.jsp"></put>
+    </definition>
+
+    <definition name="TotalPersonalDisdetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/TotalPersonalDisdetails.jsp"></put>
+    </definition>
+    <definition name="TotalReportPrint_1Tile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/TotalReportPrint_1.jsp"></put>
+    </definition>
+    <!-- All Disabilities End -->
+<!-- Locomotor Disability Start -->
+    <definition name="DisabilityReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/DisabilityReport.jsp"></put>
+    </definition>
+    <definition name="FunctionalNeedReportsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/FunctionalNeedReports.jsp"></put>
+    </definition>
+    <definition name="personal_DetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/personal_Details.jsp"></put>
+    </definition>
+    <definition name="ReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/ReportPrint.jsp"></put>
+    </definition>
+    <definition name="LocomotorReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/LocomotorReport.jsp"></put>
+    </definition>
+    <definition name="SubTypeReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/SubTypeReport.jsp"></put>
+    </definition>
+    <definition name="SubTypeDetailedReportsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/SubTypeDetailedReports.jsp"></put>
+    </definition>
+
+    <!-- Locomotor Disability End -->
+    <!-- Analysis End -->
+    <!-- meeseva-->
+    <definition name="mesevaNewCertificateRegistrationTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/Meeseva/mesevaNewCertificateRegistration.jsp"></put>
+    </definition>
+    <definition name="mesevaNewCertificatePersonalDetailsSubmitPensionNoTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/Meeseva/mesevaNewCertificatePersonalDetailsSubmitPensionNo.jsp"></put>
+    </definition>
+    <definition name="mesevaNewCertificatePersonalDetailsWithPensionNoTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/Meeseva/mesevaNewCertificatePersonalDetailsWithPensionNo.jsp"></put>
+    </definition>
+    <definition name="mesevaNewCertificatePersonalDetailsWithoutPensionNoTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/Meeseva/mesevaNewCertificatePersonalDetailsWithoutPensionNo.jsp"></put>
+    </definition>
+    <!-- meeseva end-->
+
+<!-- reports-->
+    <definition name="AppellateAgeReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/AppellateAgeReport.jsp"></put>
+    </definition>
+    <definition name="personal_details_ageTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/personal_details_age.jsp"></put>
+    </definition>
+    <definition name="AgeReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/AgeReportPrint.jsp"></put>
+    </definition>
+    <definition name="AgereportsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/Agereports.jsp"></put>
+    </definition>
+    <definition name="DisabilityWiseReportViewTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/DisabilityWiseReportView.jsp"></put>
+    </definition>
+    <definition name="ReportsTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/ReportsDisaplayMain.jsp"></put>
+    </definition>
+
+    <definition name="districtWiseStatusReportForPartAViewTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/districtWiseStatusReportForPartAView.jsp"></put>
+    </definition>
+
+    <definition name="CumulativeReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/CumulativeReport.jsp"></put>
+    </definition>
+
+    <definition name="AssessedPWDsDetaiTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/AssessedPWDsDetails.jsp"></put>
+    </definition>
+    <definition name="districtWiseStatusReportForPartBViewTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/districtWiseStatusReportForPartBView.jsp"></put>
+    </definition>
+
+    <definition name="districtWiseStatusReportForPartBViewNew" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/districtWiseStatusReportForPartBViewNew.jsp"></put>
+    </definition>
+
+    <definition name="RachaBandaReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/RachaBandaReport.jsp"></put>
+    </definition>
+    <definition name="AppellateReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/AppellateReport.jsp"></put>
+    </definition>
+    <!--changes-->
+    <definition name="AppealAuthorityReportPersonalTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/AppealAuthorityReportPersonalDetails.jsp"></put>
+    </definition>
+    <definition name="AppealAuthorityReportPersonalDetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/AppealAuthorityReportPersonalDetails.jsp"></put>
+    </definition>
+    <definition name="districtWiseStatusReportForPartAPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/districtWiseStatusReportForPartAPrint.jsp"></put>
+    </definition>
+    <definition name="CumulativeReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/CumulativeReportPrint.jsp"></put>
+    </definition>
+    <definition name="statusCountForPartAViewTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/statusCountForPartAView.jsp"></put>
+    </definition>
+    <definition name="statusCountForPartAPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/statusCountForPartAPrint.jsp"></put>
+    </definition>
+    <definition name="districtWiseStatusReportForPartBPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/districtWiseStatusReportForPartBPrint.jsp"></put>
+    </definition>
+    <definition name="AppellateReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/AppellateReportPrint.jsp"></put>
+    </definition>
+    <definition name="DisabilityWiseCountTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/DisabilityWiseCount.jsp"></put>
+    </definition>
+    <definition name="NotComeToSadaremCampTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/NotComeToSadaremCamp.jsp"></put>
+    </definition>
+    <definition name="NotComeToSadaremCampReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/NotComeToSadaremCampReport.jsp"></put>
+    </definition>
+    <definition name="educationWiseReportsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/educationWiseReports.jsp"></put>
+    </definition>
+    <definition name="sHGEligibleReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/sHGEligibleReport.jsp"></put>
+    </definition>
+    <definition name="sHGEligiblePersonalDetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/sHGEligiblePersonalDetails.jsp"></put>
+    </definition>
+
+    <definition name="CasteWiseReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/CasteWiseReport.jsp"></put>
+    </definition>
+    <definition name="PersonalCasteDetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/PersonalCasteDetails.jsp"></put>
+    </definition>
+    <definition name="CasteWiseReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/CasteWiseReportPrint.jsp"></put>
+    </definition>
+    <definition name="AgeWiseReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/AgeWiseReport.jsp"></put>
+    </definition>
+    <definition name="PersonalAgeDetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/PersonalAgeDetails.jsp"></put>
+    </definition>
+    <definition name="AgeWiseReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/AgeWiseReportPrint.jsp"></put>
+    </definition>
+    <definition name="MaritalStatusReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/MaritalStatusReport.jsp"></put>
+    </definition>
+    <definition name="MaritalStatusIndivdualDetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/MaritalStatusIndivdualDetails.jsp"></put>
+    </definition>
+    <definition name="MaritalStatusPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/MaritalStatusPrint.jsp"></put>
+    </definition>
+    <definition name="empReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/empReport.jsp"></put>
+    </definition>
+    <definition name="PersonalEmpdetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/PersonalEmpdetails.jsp"></put>
+    </definition>
+    <definition name="EmpWiseReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/EmpWiseReportPrint.jsp"></put>
+    </definition>
+    <definition name="ParentsMarriageTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/ParentsMarriage.jsp"></put>
+    </definition>
+    <definition name="ParentsMarriageIndivdualDetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/ParentsMarriageIndivdualDetails.jsp"></put>
+    </definition>
+    <definition name="parentsMarriageStatusPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/parentsMarriageStatusPrint.jsp"></put>
+    </definition>
+    <definition name="TotalReports_1Tile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/TotalReports_1.jsp"></put>
+    </definition>
+    <definition name="TotalReport_1Tile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/TotalReport_1.jsp"></put>
+    </definition>
+    <definition name="pensionForReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/pensionForReport.jsp"></put>
+    </definition>
+    <definition name="AppealAuthorityReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/AppealAuthorityReport.jsp"></put>
+    </definition>
+    <definition name="rdcallcentrerequestSearchTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/rdcallcentrerequestSearch.jsp"></put>
+    </definition>
+    <definition name="PersonalDisdetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/PersonalDisdetails.jsp"></put>
+    </definition>
+    <definition name="DisWiseReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/DisWiseReportPrint.jsp"></put>
+    </definition>
+    <definition name="ReAssessmentCampWiseReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/ReAssessmentCampWiseReport.jsp"></put>
+    </definition>
+    <definition name="ReAssessmentCampWiseReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/ReAssessmentCampWiseReportPrint.jsp"></put>
+    </definition>
+    <definition name="physicalRequirementsDetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/physicalRequirementsDetails.jsp"></put>
+    </definition>
+    <definition name="physicalRequirementsPersonalDetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/physicalRequirementsPersonalDetails.jsp"></put>
+    </definition>
+    <definition name="physicalRequirementPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/physicalRequirementPrint.jsp"></put>
+    </definition>
+    <definition name="stateWiseClusterReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/stateWiseClusterReport.jsp"></put>
+    </definition>
+    <definition name="callCentreReportBasedOnStatusTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/callCentreReportBasedOnStatus.jsp"></put>
+    </definition>
+    <definition name="reportBasedOnStatusPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/reportBasedOnStatusPrint.jsp"></put>
+    </definition>
+    <definition name="callCentreReportBasedOnMonthlyStatusTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/callCentreReportBasedOnMonthlyStatus.jsp"></put>
+    </definition>
+    <definition name="callCentreReportBasedOnMonthTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/callCentreReportBasedOnMonth.jsp"></put>
+    </definition>
+    <definition name="callDistMonthReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/callDistMonthReportPrint.jsp"></put>
+    </definition>
+    <definition name="callDistReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/callDistReportPrint.jsp"></put>
+    </definition>
+    <definition name="pensionForSearchTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/pensionForSearch.jsp"></put>
+    </definition>
+    <definition name="SearchCriteriaTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/SearchCriteria.jsp"></put> 
+    </definition>
+    <definition name="CriteriaPrintViewTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/CriteriaPrintView.jsp"></put>
+    </definition>
+    <definition name="ReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/Report.jsp"></put>
+    </definition>
+
+    <definition name="RationCardMembersearch" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/RationCardMembersSearch.jsp"></put>
+    </definition>
+    <definition name="educationWiseReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/educationWiseReports.jsp"></put>
+    </definition>
+    <definition name="personalEducationalDetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/personalEducationalDetails.jsp"></put>
+    </definition>
+    <definition name="EducationWiseReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/EducationWiseReportPrint.jsp"></put>
+    </definition>
+
+    <!--new-->
+    <definition name="SHGPersonalDetailsTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp//HomePage/Reports/SHGPersonalDetails.jsp"></put>
+    </definition>
+    <definition name="currentWorkingCampReportTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/currentWorkingCampReport.jsp"></put>
+    </definition>
+    <definition name="SearchTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/Search.jsp"></put>
+    </definition>
+    <definition name="callCentreIndividualReportBasedOnStatusTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/callCentreIndividualReportBasedOnStatus.jsp"></put>
+    </definition>
+    <definition name="callCentreIndividualReportBasedOnStatusPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/callCentreIndividualReportBasedOnStatusPrint.jsp"></put>
+    </definition>
+
+    <definition name="DisabilityExceptionReportTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/Exception/DisabilityExceptionReport.jsp"></put>
+    </definition>
+
+    <definition name="mandalWiseStatusReportForPartBViewTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/mandalWiseStatusReportForPartBView.jsp"></put>
+    </definition>
+    <definition name="StatusReportforPartBAssessedTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/StatusReportforPartBAssessed.jsp"></put>
+    </definition>
+    <definition name="RachaBandaPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/RachaBandaPrint.jsp"></put>
+    </definition>
+    <definition name="PersonalCasteWiseSingleTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/PersonalCasteWiseSingle.jsp"></put>
+    </definition>
+    <definition name="CasteWiseDetailsSinglePrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/CasteWiseDetailsSinglePrint.jsp"></put>
+    </definition>
+    <definition name="PersonalEmpWiseSingleTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/PersonalEmpWiseSingle.jsp"></put>
+    </definition>
+    <definition name="stateWiseDistrictBreakUpReportTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/stateWiseDistrictBreakUpReport.jsp"></put>
+    </definition>
+    <definition name="PensionResultTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/PensionResult.jsp"></put>
+    </definition>
+    <definition name="DemogrepyReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/DemogrepyReport.jsp"></put>
+    </definition>
+
+
+    <!-- reports-->
+
+<!-- Go & Acts-->
+    <definition name="GOsTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/GOs.jsp"></put>
+    </definition>
+    <!-- Go & Acts-->
+<!--Related Links-->
+    <definition name="RelatedTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/Relatedlinks.jsp"></put>
+    </definition>
+    <!--Related Links-->
+<!--Documents-->
+    <definition name="DocsTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/Docs.jsp"></put>
+    </definition>
+    <!--Documents-->
+
+<!--News & Events-->
+    <definition name="NewsTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/News.jsp"></put>
+    </definition>
+    <!--News & Events-->
+<!--Awards-->
+    <definition name="AwardsTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/Awards.jsp"></put>
+    </definition>
+    <!--Awards-->
+<!--gallerys-->
+    <definition name="GalleryTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/Gallery.jsp"></put>
+    </definition>
+    <!--gallery-->
+<!--Feedback-->
+    <definition name="FeedbackformTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/Feedbackform.jsp"></put>
+    </definition>
+    <definition name="FeedbackAllDetailsTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/FeedbackAllDetails.jsp"></put>
+    </definition>
+    <!--Feedback-->
+<!--Contacts-->
+    <definition name="ContactTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/Contact.jsp"></put>
+    </definition>
+    <!--Contacts-->
+
+
+    <definition name="DisabilityReportsTile" page="/DisabilityUITG/tiles/ReportsLayout.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp" />
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+    </definition>
+    <definition name="NirmayaDateReportLayoutTile" page="/DisabilityUITG/tiles/LayoutforNirmayaReport.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp" />
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+    </definition>
+    <definition name="PWDReportTile" page="/DisabilityUITG/tiles/LayoutForNewPWDReport.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp" />
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+        <put name="date" value="/DisabilityUITG/jsp/ReportForPWDDate.jsp" />
+        <put name="left" value="/DisabilityUITG/jsp/ReportsForPWDTerritory.jsp" />
+        <put name="body" value="/DisabilityUITG/jsp/ReportForPWDBody.jsp" />
+    </definition>
+    <definition name="DailyDisabilityWiseReportTile" page="/DisabilityUITG/tiles/LayoutForDisabilityReport.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp" />
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+        <put name="date" value="/DisabilityUITG/jsp/DailyDisabilityWiseReport.jsp" />
+        <put name="body" value="/DisabilityUITG/jsp/DisabilityWiseReportView.jsp" />
+    </definition>
+    <definition name="DailyDisabilityPercentageWiseReportTile" page="/DisabilityUITG/tiles/LayoutForDisabilityPercentageReport.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp" />
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+        <put name="date" value="/DisabilityUITG/jsp/DailyDisabilityPercentageWiseReport.jsp" />
+        <put name="body" value="/DisabilityUITG/jsp/DisabilityPercentageWiseReportView.jsp" />
+    </definition>
+
+    <definition name="DisabilityPercentageExceptionReportTile" extends="DailyDisabilityPercentageWiseReportTile" >
+        <put name="body" value="/DisabilityUITG/jsp/DisabilityExceptionReport.jsp"></put>
+    </definition>
+    <definition name="PWDReportExceptiontile" extends="PWDReportTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PWDReportException.jsp"></put>
+    </definition>
+    <definition name="AddHabitationtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/AddHabitation.jsp"></put>
+    </definition>
+    <definition name="AddVillagetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/AddVillage.jsp"></put>
+    </definition>
+    <definition name="AddPanchayattile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/AddPanchayat.jsp"></put>
+    </definition>
+    <definition name="AddMandaltile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/AddMandal.jsp"></put>
+    </definition>
+    <definition name="AddAssemblytile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/AddAssembly.jsp"></put>
+    </definition>
+
+    <definition name="AddLoginErrortile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/AddLoginError.jsp"></put>
+    </definition>
+
+    <definition name="AddDistricttile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/AddDistrict.jsp"></put>
+    </definition>
+    <definition name="RejectedCertificatepercentagetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/RejectedCertificateWithPercentage.jsp"></put>
+    </definition>
+    <definition name="RejectedCertificateForPersoncodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RejectedCertificateForpersoncode.jsp"></put>
+    </definition>
+
+    <definition name="TerritorySelecttile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/TerritorySelect.jsp"></put>
+    </definition>
+    <!-- UPdate part-A only -->
+
+    <definition name="PersoncodeforPhysicalReqTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PersoncodeforPhysicalReq.jsp"></put>
+    </definition>
+
+    <!-- UPdate Doctros Detials based on Person Code -->
+
+    <!--changes-->
+   <!-- <definition name="PersonCodeFailureForCetificateTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/PersoncodeFailureForCertificate.jsp"></put>
+    </definition>-->
+    <definition name="RejectedCertificatepersoncodetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/RejectedCertificateWithPersoncode.jsp"></put>
+    </definition>
+
+    <definition name="TerritorySelectForCertificatetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/TerritorySelectForCertificate.jsp"></put>
+    </definition>
+
+    <definition name="ReportFailuretile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/ReportFailure.jsp"></put>
+    </definition>
+
+    <definition name="PersoncodeCertificatetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/EnterCertificatePersoncode.jsp"></put>
+    </definition>
+
+    <definition name="PersoncodeRejectedCertificatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/EnterRejectedCertificatePersoncode.jsp"></put>
+    </definition>
+    <definition name="TerritorySelectForIdCardtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/TerritorySelectForIdCard.jsp"></put>
+    </definition>
+    <!--  <definition name="RejectedCertificateForPersoncodetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/RejectedForPersoncode.jsp"></put>
+    </definition>-->
+    <definition name="IdCardForpersoncodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/idcard/IdcardForPersoncode.jsp"></put>
+    </definition>
+    <definition name="CertificateForPersoncodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfteLogin/Reports/CertificateForPersoncode.jsp"></put>
+    </definition>
+    <definition name="TerritorySelectForPhysicalReporttile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PhysicaReport.jsp"></put>
+    </definition>
+
+    <definition name="TransversLongetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/TransverseLong.jsp"></put>
+    </definition>
+    <definition name="PartADetailsInserttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/PartADetailsInsert.jsp"></put>
+    </definition>
+    <definition name="PhysicalRequirementsupdatetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PhysicalRequirementsupdate.jsp"></put>
+    </definition>
+    <definition name="fileupload" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/fileupload.jsp"></put>
+    </definition>
+    <definition name="uploadsuccesstile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/image_success.jsp"></put>
+    </definition>
+
+    <definition name="MentalCertificatetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MentalCetificate.jsp"></put>
+    </definition>
+    <definition name="PersonCodetile1" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PersonCode1.jsp"></put>
+    </definition>
+
+    <definition name="PersonCodeSelecttile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/TerritorySelectForUpdate.jsp"></put>
+    </definition>
+    <definition name="Reportstile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/ReportForPersoncodeSelect.jsp"></put>
+    </definition>
+
+    <definition name="EvaluationFailuretile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/EvaluationFailure.jsp"></put>
+    </definition>
+
+    <definition name="UpperExtrimityFailuretile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/UpperExtrimityFailure.jsp"></put>
+    </definition>
+
+    <definition name="LocomotorSublinkUpdatetileRe" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/LocomotorSublinkPrint.jsp"></put>
+    </definition>
+
+    <definition name="Certificatetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/Certificate.jsp"></put>
+    </definition>
+
+    <definition name="Nodatatile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/Nodata.jsp"></put>
+    </definition>
+
+
+
+    <definition name="LocomotorLinkUpdatetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/LocomotorLinkUpdate.jsp"></put>
+    </definition>
+    <definition name="certificatetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/certificatewithPhysicalreq.jsp"></put>
+    </definition>
+
+
+    <definition name="Failuretile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/Failure.jsp"></put>
+    </definition>
+    <definition name="selectservicestile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/selectservices.jsp"></put>
+    </definition>
+    <definition name="contactustile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/ContactUs/contactus.jsp"></put>
+    </definition>
+    <definition name="newTitle" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/News.jsp"></put>
+    </definition>
+    <definition name="news" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/NewsTitles.jsp"></put>
+    </definition>
+    <definition name="NewsandEventstile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/NewsandEvents.jsp"></put>
+    </definition>
+    <!--others starts-->
+    <definition name="calculationtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/Calculation.jsp"></put>
+    </definition>
+    <definition name="formatstile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/formats.jsp"></put>
+    </definition>
+    <definition name="documentstile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/Documents.jsp"></put>
+    </definition>
+    <definition name="userLoginsDisplaytile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/UserLoginsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="ChangePasswordtile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/changepassword.jsp"></put>
+    </definition>
+    <definition name="ReassessmentFiltring" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/ReassessmentFiltring.jsp"></put>
+    </definition>
+    <definition name="rationCardTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/RationCardServiceReport.jsp"></put>
+    </definition>
+
+
+    <definition name="DownloadFileTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/DownloadFile.jsp"></put>
+    </definition>
+
+    <definition name="SearchForRationCardTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/searchForRationCard.jsp"></put>
+    </definition>
+
+    <definition name="RequestPersonalTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/nameRelationChange.jsp"></put>
+    </definition>
+
+    <definition name="RequestPersonalDetailsDataTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/changeParticularDetails.jsp"></put>
+    </definition>
+
+    <definition name="ApprovalDisabilityTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/issueRaiseApproval.jsp"></put>
+    </definition>
+
+    <definition name="addressChangePhaseIIITile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/addressChangePhaseIII.jsp"></put>
+    </definition>
+
+    <definition name="blankPagesTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/blankPages.jsp"></put>
+    </definition>
+
+    <definition name="IssueTrackerDisabilityTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/issueTracker.jsp"></put>
+    </definition>
+
+    <definition name="forgetPasswordRequestTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/forgetPasswordRequest.jsp"></put>
+    </definition>
+
+    <definition name="InvalidPersonCodeTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/InvalidPersonCode.jsp"></put>
+    </definition>
+
+    <definition name="medicalBoardChangeTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/medicalBoardChange.jsp"></put>
+    </definition>
+    <definition name="nameChangeRequestTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/nameChangeRequest.jsp"></put>
+    </definition>
+
+    <definition name="rationCardNotOpenTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/rationCardNotOpen.jsp"></put>
+    </definition>
+    <definition name="pensionIdNotOpeningTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/pensionIdNotOpening.jsp"></put>
+    </definition>
+
+    <definition name="rationCardSerialNoTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/rationCardSerialNo.jsp"></put>
+    </definition>
+
+    <definition name="relationNameRequestTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/relationNameRequest.jsp"></put>
+    </definition>
+    <definition name="phaseIIIConversionTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/phaseIIIConversion.jsp"></put>
+    </definition>
+    <definition name="surNameRequestTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/surNameRequest.jsp"></put>
+    </definition>
+    <definition name="viceVersaTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/viceVersa.jsp"></put>
+    </definition>
+    <definition name="technicalDifficultyTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/technicalDifficulty.jsp"></put>
+    </definition>
+    <definition name="ResolvedDetailsTile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/IssueResolvedDetails.jsp"></put>
+    </definition>
+    <definition name="NoPhotosData" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/NoPhotosData.jsp"></put>
+    </definition>
+    <definition name="ValidPersonDetails" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/ValidPersonDetails.jsp"></put>
+    </definition>
+    <definition name="dateOfIssueTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/dateOfIssue.jsp"></put>
+    </definition>
+    <definition name="subDisabilityType" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/subDisabilityType.jsp"></put>
+    </definition>
+    <definition name="IssueApprovalTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/IssueApproval.jsp"></put>
+    </definition>
+    <definition name="issueResolveTile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/issueResolve.jsp"></put>
+    </definition>
+    <definition name="rationCardNotOpenListTile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/rationCardNotOpenList.jsp"></put>
+    </definition>
+    <definition name="rationCardSerilaNoListTile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/rationCardSerilaNoList.jsp"></put>
+    </definition>
+
+    <definition name="pensionIdNotOpenListTile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/pensionIdNotOpenList.jsp"></put>
+    </definition>
+    <definition name="issueDocumentViewTile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/issueDocumentView.jsp"></put>
+    </definition>
+    <definition name="issueViewRaisingTile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/issueViewRaising.jsp"></put>
+    </definition>
+    <definition name="AddLoginTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Newlogin/AddLogin.jsp"></put>
+    </definition>
+    <definition name="resetpasswordTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Newlogin/resetpassword.jsp"></put>
+    </definition>
+    <definition name="addroleTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Newlogin/addrole.jsp"></put>
+    </definition>
+    <definition name="selectroleTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Newlogin/selectrole.jsp"></put>
+    </definition>
+
+    <!--others ends-->
+
+    <definition name="Physicalimpairmentreporttile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PWDPhysicalImpairment.jsp"></put>
+    </definition>
+
+
+    <!-- ===================Niramaya Reports Start ================================ -->
+    <definition name="NiramayaDateReportTile" extends="NirmayaDateReportLayoutTile" >
+        <put name="date" value="/DisabilityUITG/jsp/NirmayaReportDate.jsp" />
+    </definition>
+    <definition name="CommonNiramayaReportExceptionFailuretile" extends="NirmayaDateReportLayoutTile" >
+        <put name="date" value="/DisabilityUITG/jsp/NirmayaReportDate.jsp" />
+        <put name="body" value="/DisabilityUITG/jsp/FailureReport.jsp"></put>
+    </definition>
+    <definition name="SelectDistrictWisereportNiramayaTile" extends="NirmayaDateReportLayoutTile" >
+        <put name="date" value="/DisabilityUITG/jsp/NirmayaReportDate.jsp" />
+        <put name="body" value="/DisabilityUITG/jsp/NiramayaDistrictReport.jsp"></put>
+    </definition>
+    <definition name="SelectMandalWisereportNiramayaTile" extends="NirmayaDateReportLayoutTile" >
+        <put name="date" value="/DisabilityUITG/jsp/NirmayaReportDate.jsp" />
+        <put name="body" value="/DisabilityUITG/jsp/NiramayaMandalReport.jsp"></put>
+    </definition>
+    <definition name="SelectVillageWisereportNiramayaTile" extends="NirmayaDateReportLayoutTile" >
+        <put name="date" value="/DisabilityUITG/jsp/NirmayaReportDate.jsp" />
+        <put name="body" value="/DisabilityUITG/jsp/NiramayaVillageReport.jsp"></put>
+    </definition>
+    <definition name="SelectHabitationWisereportNiramayaTile" extends="NirmayaDateReportLayoutTile" >
+        <put name="date" value="/DisabilityUITG/jsp/NirmayaReportDate.jsp" />
+        <put name="body" value="/DisabilityUITG/jsp/NiramayaHabitationReport.jsp"></put>
+    </definition>
+    <!-- ===================Added By Reports Start ================================ -->
+    <definition name="SurgeryWiseDateReportTile" extends="DisabilityReportsTile" >
+        <put name="surgerytype" value="/DisabilityUITG/tiles/SurgeryType.jsp" />
+    </definition>
+
+    <definition name="SurgeryWisereporttile" extends="SurgeryWiseDateReportTile" >
+
+        <put name="LeftNavigationReport" value="/DisabilityUITG/jsp/SurgeryWiseReport.jsp"></put>
+    </definition>
+
+    <definition name="SelectDistrictWisereporttileSurgery" extends="SurgeryWisereporttile" >
+
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/DistrictReportForSurgerySelect.jsp"></put>
+    </definition>
+    <definition name="CommonSurgeryReportExceptionFailuretile" extends="DisabilityReportsTile" >
+        <put name="surgerytype" value="/DisabilityUITG/tiles/SurgeryType.jsp" />
+        <put name="LeftNavigationReport" value="/DisabilityUITG/jsp/SurgeryWiseReport.jsp"></put>
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/FailureReport.jsp"></put>
+    </definition>
+    <definition name="AssistiveDeviceDateReportTile" extends="DisabilityReportsTile" >
+        <put name="assistivedevice" value="/DisabilityUITG/tiles/AssistiveDevices.jsp" />
+    </definition>
+    <definition name="AssistiveDevicereporttile" extends="AssistiveDeviceDateReportTile" >
+        <put name="assistivedevice" value="/DisabilityUITG/tiles/AssistiveDevices.jsp" />
+        <put name="LeftNavigationReport" value="/DisabilityUITG/jsp/AssistiveDeviceReport.jsp"></put>
+    </definition>
+
+    <!--changes-->
+    <definition name="SelectPersonalreporttileforassistive" extends="AssistiveDevicereporttile" >
+        <put name="assistivedevice" value="/DisabilityUITG/tiles/AssistiveDevices.jsp" />
+        <put name="LeftNavigationReport" value="/DisabilityUITG/jsp/AssistiveDeviceReport.jsp"></put>
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/DistrictReportForSurgerySelect.jsp"></put>
+    </definition>
+
+    <definition name="CommonAssistiveReportExceptionFailuretile" extends="DisabilityReportsTile" >
+        <put name="assistivedevice" value="/DisabilityUITG/tiles/AssistiveDevices.jsp" />
+        <put name="LeftNavigationReport" value="/DisabilityUITG/jsp/AssistiveDeviceReport.jsp"></put>
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/FailureReport.jsp"></put>
+    </definition>
+
+    <definition name="EducationServiceDateReportTile" extends="DisabilityReportsTile" >
+        <put name="surgerytype" value="/DisabilityUITG/tiles/EducationServices.jsp" />
+    </definition>
+    <definition name="EducationServicesreporttile" extends="EducationServiceDateReportTile" >
+        <put name="LeftNavigationReport" value="/DisabilityUITG/jsp/EducationServices.jsp"></put>
+    </definition>
+    <!--changes-->
+    <definition name="SelectDistrictWisereporttileEdu" extends="EducationServicesreporttile" >
+
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/SelectDistrictReportForEducationServices.jsp"></put>
+    </definition>
+    <definition name="CommonEducationReportExceptionFailuretile" extends="DisabilityReportsTile" >
+        <put name="assistivedevice" value="/DisabilityUITG/tiles/EducationServices.jsp" />
+        <put name="LeftNavigationReport" value="/DisabilityUITG/jsp/EducationServices.jsp"></put>
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/FailureReport.jsp"></put>
+    </definition>
+
+    <definition name="SelectDistrictWisereporttile" extends="SurgeryWisereporttile" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/SelectDistrictReportForSurgery.jsp"></put>
+    </definition>
+
+    <definition name="SelectDistrictWisereporttileEdu" extends="EducationServicesreporttile" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/DistrictReportForEducationServicesSelect.jsp"></put>
+    </definition>
+
+    <definition name="SelectDistrictWisereporttileAssistive" extends="AssistiveDevicereporttile" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/DistrictReportForAssistiveDevicesSelect.jsp"></put>
+    </definition>
+
+
+
+    <definition name="SelectMandalWisereporttileforsurgery" extends="SelectDistrictWisereporttile" >
+
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/MandalReportForSurgerySelect.jsp"></put>
+    </definition>
+
+    <definition name="SelectMandalWisereporttileforeducation" extends="SelectDistrictWisereporttileEdu" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/MandalReportForEducationServicesSelect.jsp"></put>
+    </definition>
+    <definition name="SelectMandalWisereporttileforassistive" extends="SelectDistrictWisereporttileAssistive" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/MandalReportForAssistiveDevicesSelect.jsp"></put>
+    </definition>
+
+    <definition name="SelectVillageWisereporttile" extends="SelectDistrictWisereporttile" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/VillageReportForSurgerySelect.jsp"></put>
+    </definition>
+    <definition name="SelectVillageWisereporttileforeducation" extends="SelectDistrictWisereporttileEdu" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/VillageReportForEducationServicesSelect.jsp"></put>
+    </definition>
+    <definition name="SelectVillageWisereporttileforassistive" extends="SelectDistrictWisereporttileAssistive" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/VillageReportForAssistiveDevicesSelect.jsp"></put>
+    </definition>
+
+    <definition name="SelectHabitationWisereporttile" extends="SelectDistrictWisereporttile" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/HabitationReportForSurgerySelect.jsp"></put>
+    </definition>
+    <definition name="SelectHabitationWisereporttileforeducation" extends="SelectDistrictWisereporttileEdu" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/HabitationReportForEducationServicesSelect.jsp"></put>
+    </definition>
+    <definition name="SelectHabitationWisereporttileforassistive" extends="SelectDistrictWisereporttileAssistive" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/HabitationReportForAssistiveDevicesSelect.jsp"></put>
+    </definition>
+
+    <definition name="SelectPersonalreporttileforsurgery" extends="SelectDistrictWisereporttile" >
+
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+    <definition name="SelectPersonalreporttileforeducation" extends="SelectDistrictWisereporttileEdu" >
+
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+
+    <definition name="SelectPersonalreporttileforassistive" extends="SelectDistrictWisereporttileAssistive" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+    <definition name="SelectPersonalreporttilemandalforsurgery" extends="SelectDistrictWisereporttile" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+    <definition name="SelectPersonalreporttilemandalforeducation" extends="SelectDistrictWisereporttileEdu" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+    <definition name="SelectPersonalreporttilemandalforassistive" extends="SelectDistrictWisereporttileAssistive" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+    <definition name="SelectPersonalreporttilevillageforsurgery" extends="SelectDistrictWisereporttile" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+    <definition name="SelectPersonalreporttilevillageforeducation" extends="SelectDistrictWisereporttileEdu" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+    <definition name="SelectPersonalreporttilevillageforassistive" extends="SelectDistrictWisereporttileAssistive" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+    <definition name="SelectPersonalreporttilehabitationforsurgery" extends="SelectDistrictWisereporttile" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+    <definition name="SelectPersonalreporttilehabitationforeducation" extends="SelectDistrictWisereporttileEdu" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+    <definition name="SelectPersonalreporttilehabitationforassistive" extends="SelectDistrictWisereporttileAssistive" >
+        <put name="MiddleBodyReport" value="/DisabilityUITG/jsp/PersonalReport.jsp"></put>
+    </definition>
+    <definition name="CommonReportFailuretile" extends="DisabilityReportsTile" >
+        <put name="body" value="/DisabilityUITG/jsp/FailureReport.jsp"></put>
+    </definition>
+    <!-- ===================Added By Raghavendra Start ================================ -->
+
+      <!-- ===================End By Raghavendra  ================================ -->
+
+    <definition name="ReportNavigationtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/tiles/ReportNavigation.jsp"></put>
+    </definition>
+
+    <definition name="DoctorsUpdatetile" extends="DisabilityTile">
+        <put name="body" value="/DisabilityUITG/jsp/EnterpersoncodeforUpdateDoctordetails.jsp"></put>
+    </definition>
+
+
+
+    <definition name="RailwayceritficateByPersonCodeTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/RailwayCertificatewithpersoncode.jsp"></put>
+    </definition>
+    <definition name="Railwaycertificatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/Railwaycertificate.jsp"></put>
+    </definition>
+    <definition name="IdCardtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/IdentityCard.jsp"></put>
+    </definition>
+    <definition name="ViewDatabaseBackupJsptile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/DataBackup.jsp"></put>
+    </definition>
+
+
+    <!--changes-->
+    <definition name="LowerExtremityCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/LowerExtremityCalculationsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="PersoncodeIdcardtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/EnterIdCardPersoncode.jsp"></put>
+    </definition>
+    <!--changes-->
+    <definition name="TrunkCalculationsDisplayTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TrunkCalculationsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="PersoncodeCertificateWithIdcardtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/EnterPersonCodeForCertificateWithIdcard.jsp"></put>
+    </definition>
+
+    <!--Hearing -->
+    <!-- ===================Added By Reports Stop ================================ -->
+
+    <definition name="PersoncodeCalculationtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/EnterCalculationPersoncode.jsp"></put>
+    </definition>
+
+    <definition name="helpcontenttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Home/helpcontent.jsp"></put>
+    </definition>
+
+    <definition name="AddTerritoryInformationtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/AddTerritoryInformation.jsp"></put>
+    </definition>
+
+    <definition name="UpdateTerritoryInformationtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/UpdateTerritoryInformation.jsp"></put>
+    </definition>
+
+
+
+
+
+    <!-- =================== Existing pension Details tiles-definitions starts here ================================ -->
+
+    <definition name="DecisionForPWDPensionTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/DecisionForPWDPension.jsp"></put>
+    </definition>
+
+    <definition name="ExistingRationcardorNotTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/ExistingRationcardorNot.jsp"></put>
+    </definition>
+
+
+
+    <definition name="DecisionForPWDPensionRestrictPartATile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/DecisionForPWDPensionForPartA.jsp"></put>
+    </definition>
+    <!-- =================== Existing pension Details tiles-definitions Ends here ================================ -->
+
+
+    <definition name="updateCamptile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/UpdateCamp.jsp"></put>
+    </definition>
+
+    <definition name="PersonCodeForUpdatetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PersonCodeForUpdate.jsp"></put>
+    </definition>
+
+    <definition name="EnterPesonCodeforPhysicalRequiretile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/EnterPesonCodeforPhysicalRequire.jsp"></put>
+    </definition>
+    <!-- =================== DeletePersonDetails ================================ -->
+    <definition name="deletepersoncodetiles" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/DeletePersonCode.jsp"></put>
+    </definition>
+    <definition name="DeletePersonCodeFailureTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/DeletePersonCodeFailure.jsp"></put>
+    </definition>
+
+    <definition name="PersonCodeUpdateDetailstile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PersonCodeUpdateDetails.jsp"></put>
+    </definition>
+
+    <definition name="PersonCodeUpdateSuccesstile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PersonCodeUpdateSuccess.jsp"></put>
+    </definition>
+    <!-- Report for PersonalDetails wise Report-->
+
+    <definition name="personaldetailswisereporttile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/DailyPersonalDetailsReportView.jsp" />
+    </definition>
+    <!--LoginWise Count ReportForms-->
+    <definition name="loginwiseformscounttile" extends="LoginLayout">
+        <!--<put name="date" value="/DisabilityUITG/jsp/ReportForLoginwiseCountForms.jsp"/>-->
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/ReportForLoginWiseCountFormsView.jsp" />
+    </definition>
+
+    <!--Territory wise Part-A Details Count ReportForms like Mandalwise and Villagewise-->
+    <definition name="statusContForPWDReportTile" extends="LoginLayout">
+        <!-- <put name="date" value="/DisabilityUITG/jsp/statusCountForPWDMandalReport.jsp"/>-->
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/statusCountForPWDMandalReportView.jsp" />
+    </definition>
+
+    <definition name="statusContForPWDVillageReportTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/statusCountForPWDVillageReportView.jsp" />
+    </definition>
+    <definition name="reportForVillageWiseCountPrintTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/reportForVillageWiseCountPrint.jsp" />
+    </definition>
+    <definition name="reportForMandalWiseCountPrintTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/reportForMandalWiseCountPrint.jsp" />
+    </definition>
+    <definition name="ReportForLoginWiseCountFormsPrintTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/ReportForLoginWiseCountFormsPrint.jsp" />
+    </definition>
+    <definition name="PhotoSelectUploadTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/PhotoSelectUpload.jsp" />
+    </definition>
+    <!--=====Update User Role============-->
+    <definition name="selectUsertile" extends="DisabilityTile">
+        <put name="body" value="/DisabilityUITG/jsp/updateUserRole.jsp"></put>
+    </definition>
+    <!--=== District Wise Status Count For Part-A Report ====-->
+
+    <definition name="reportforPartATile" page="/DisabilityUITG/tiles/LayoutForPWDIDReports.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp"/>
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+        <put name="date" value="/DisabilityUITG/jsp/districtWiseStatusReportForPartA.jsp"/>
+    </definition>
+    <definition name="distWisestatusreportforPartATile" page="/DisabilityUITG/tiles/LayoutForPWDIDReports.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp"/>
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+        <put name="date" value="/DisabilityUITG/jsp/districtWiseStatusReportForPartA.jsp"/>
+        <put name="body" value="/DisabilityUITG/jsp/districtWiseStatusReportForPartAView.jsp" />
+    </definition>
+    <!--=== Status Count For Part-A Report====-->
+    <definition name="statusContForPartATile" page="/DisabilityUITG/tiles/LayoutForPWDIDReports.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp"/>
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+        <put name="date" value="/DisabilityUITG/jsp/districtWiseStatusReportForPartA.jsp"/>
+        <put name="body" value="/DisabilityUITG/jsp/statusCountForPartAView.jsp" />
+    </definition>
+
+    <!--=== Status Count For Part-A Part-B Report====-->
+    <definition name="reportforPartBTile" page="/DisabilityUITG/tiles/LayoutForPWDIDReports.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp"/>
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="date" value="/DisabilityUITG/jsp/districtWiseStatusReportForPartB.jsp"/>
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+    </definition>
+    <definition name="distWisestatusreportforPartBTile" page="/DisabilityUITG/tiles/LayoutForPWDIDReports.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp"/>
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="date" value="/DisabilityUITG/jsp/districtWiseStatusReportForPartB.jsp"/>
+        <put name="body" value="/DisabilityUITG/jsp/districtWiseStatusReportForPartBView.jsp"/>
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+    </definition>
+    <definition name="mandalWisestatusreportforPartBTile" page="/DisabilityUITG/tiles/LayoutForPWDIDReports.jsp">
+        <put name="header" value="/DisabilityUITG/tiles/Header.jsp"/>
+        <put name="menu" value="/DisabilityUITG/tiles/Menu.jsp" />
+        <put name="footer" value="/DisabilityUITG/tiles/Footer.jsp" />
+        <put name="date" value="/DisabilityUITG/jsp/districtWiseStatusReportForPartB.jsp"/>
+        <put name="body" value="/DisabilityUITG/jsp/mandalWiseStatusReportForPartBView.jsp"/>
+    </definition>
+    <definition name="villageWiseStatusReportForPartBTile" page="/DisabilityUITG/tiles/LayoutForPWDIDReports.jsp">
+        <put name="body" value="/DisabilityUITG/jsp/villageWiseStatusReportForPartBView.jsp"/>
+    </definition>
+
+
+
+    <definition name="PhotoUploadTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/PhotoUpload.jsp"></put>
+    </definition>
+
+
+    <definition name="ViewOrEditModeTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/ViewEditMode.jsp"></put>
+    </definition>
+    <definition name="GetViewOrEditModeTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/GetViewOrEditMode.jsp"></put>
+    </definition>
+
+
+    <!-- END -->
+    <!--=====Starts for Data Entered Fields Report============-->
+
+    <definition name="EnterPersonCodeForDataEnteredFieldsTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/EnterPersonCodeForDataEnteredFields.jsp"></put>
+    </definition>
+
+
+    <definition name="getDataEnteredFieldsTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/GetDataEnteredFields.jsp"></put>
+    </definition>
+    <!--=====End for Data Entered Fields Report============-->
+
+   <!--=====Starts for Feedback deatils============-->
+
+    <definition name="feedbackDetailsTile" extends="DisabilityTile">
+        <put name="body" value="/DisabilityUITG/jsp/FeedbackDisplay.jsp"></put>
+    </definition>
+
+    <!--=====Starts for Territory Select Report============-->
+
+
+    <!--=====End for Starts for Territory Select Report============-->
+
+
+
+    <!--=====Starts for Territory Select Report============-->
+    <definition name="TerritorySelectForPensionerstile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/TerritorySelectNew.jsp"></put>
+    </definition>
+
+    <!--=====End for Starts for Territory Select Report============-->
+
+
+<!--===== Starts for Employee Form Flow ============-->
+    <definition name="PartADetailsInsertForEmployeeTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/PartADetailsInsertForEmployee.jsp"></put>
+    </definition>
+    <definition name="PensionReportTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/PensionSearchBody.jsp"></put>
+    </definition>
+
+    <definition name="searchCriteria" page="/DisabilityUITG/tiles/newReportLayout.jsp">
+        <put name="body" value="/DisabilityUITG/jsp/SearchCriteria.jsp"></put>
+    </definition>
+
+    <definition name="pensionForsearch" page="/DisabilityUITG/tiles/newLayout.jsp">
+        <put name="body" value="/DisabilityUITG/jsp/pensionForSearch.jsp"></put>
+    </definition>
+
+    <definition name="pensionForsearchFailure" page="/DisabilityUITG/tiles/newLayout.jsp">
+        <put name="body" value="/DisabilityUITG/jsp/pensionForSearch.jsp"></put>
+    </definition>
+
+    <definition name="pensionCert" page="/DisabilityUITG/tiles/newLayout.jsp">
+        <put name="body" value="/DisabilityUITG/jsp/PensionResult.jsp"></put>
+    </definition>
+
+
+    <definition name="partAdetailsUpdateNew" extends="DisabilityTile">
+        <put name="body" value="/DisabilityUITG/jsp/PartADetailsUpdateNew.jsp"></put>
+    </definition>
+
+
+    <!--===== Ends for Employee Form Flow ============-->
+
+
+<!-- Reassement -->
+    <definition name="PersonCodeFailureTileRe" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PersonCodeFailure.jsp"></put>
+    </definition>
+    <definition name="TerritoryfailuretileRe" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/TerritoryFailure.jsp"></put>
+    </definition>
+
+    <definition name="PartADetailsUpdateForExistingPensionNumberRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PartADetailsUpdateForExistingPensionNumberRe.jsp"></put>
+    </definition>
+
+    <definition name="LocomotorSublinkUpdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/LocomotorSublinkUpdateRe.jsp"></put>
+    </definition>
+
+    <definition name="PartADetailsDisplayToPartBUpdateReTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PartADetailsDisplayToPartBUpdateRe.jsp"></put>
+    </definition>
+
+    <definition name="PartADisabilityDetailsUpdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PartADisabilityDetailsUpdateRe.jsp"></put>
+    </definition>
+    <definition name="PartCUpdateRetile" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/PartcUpdateRe.jsp"></put>
+    </definition>
+
+    <definition name="DataEntrySuccessRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/DataEntrySuccess.jsp"></put>
+    </definition>
+
+    <definition name="DataEntrySuccessUpdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/DataEntrySuccessUpdateRe.jsp"></put>
+    </definition>
+
+    <definition name="LocomotorneedsupdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PhysicalimpairmentUpdateSublinkRe.jsp"></put>
+    </definition>
+
+
+
+    <definition name="UpperExtrimityUpdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/ModifyUpperExtremityRe.jsp"></put>
+    </definition>
+
+    <definition name="LowerExtrimityupdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/lowerextremityupdateRe.jsp"></put>
+    </definition>
+
+    <definition name="AmputationUpdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/AmputationUpdateRe.jsp"></put>
+    </definition>
+
+    <definition name="TransverseupdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/TransverseUpdateRe.jsp"></put>
+    </definition>
+
+    <definition name="TrunkupdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/trunkupdateRe.jsp"></put>
+    </definition>
+
+    <definition name="EvaluationupdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/EvaluationDetailsUpdateRe.jsp"></put>
+    </definition>
+
+    <definition name="CardioPulmonaryDeseasesUpdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/UpdateCardioPulmonaryRe.jsp"></put>
+    </definition>
+
+    <definition name="DwarfismUpdateRetile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/UpdateDwarfismRe.jsp"></put>
+    </definition>
+
+    <!-- Appleat Authoritiy -->
+    <definition name="AppealPersonalDataTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AppealPersonalData.jsp"></put>
+    </definition>
+    <definition name="AppealFailureTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AppealFailure.jsp"></put>
+    </definition>
+    <definition name="AppealPersonalDetailsTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AppealPersonalDetails.jsp"></put>
+    </definition>
+
+
+    <!--=====Starts for Data Entered Fields Report for Applet Authority============-->
+
+    <definition name="EnterPersonCodeForDataEnteredAUFieldsTile" extends="DisabilityTile">
+        <put name="body" value="/DisabilityUITG/jsp/EnterPersonCodeForDataEnteredFieldsAU.jsp"></put>
+    </definition>
+
+    <definition name="getDataEnteredFieldsAUTile" extends="DisabilityTile">
+        <put name="body" value="/DisabilityUITG/jsp/GetDataEnteredFieldsAU.jsp"></put>
+    </definition>
+
+    <!--=====End for Data Entered Fields Report============-->
+
+  <!-- Applet Authority -->
+
+    <definition name="PartADisabilityDetailsInsertAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PartADisabilityDetailsInsertForAU.jsp"></put>
+    </definition>
+
+
+
+
+    <definition name="LocomotorSublinkAUStile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/LocomotorSublinkAU.jsp"></put>
+    </definition>
+
+    <definition name="PartCAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PartCAU.jsp"></put>
+    </definition>
+
+
+
+
+    <definition name="PhysicalimpairmentAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/PhysicalimpairmentSublinkAU.jsp"></put>
+    </definition>
+
+    <definition name="UpperExtrimityAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/UpperextrimityAU.jsp"></put>
+    </definition>
+
+    <definition name="LowerExtrimityAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/lowerextremityinsertAU.jsp"></put>
+    </definition>
+
+    <definition name="AmputationAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/AmputationAU.jsp"></put>
+    </definition>
+
+    <definition name="TransverseAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/TransverseAU.jsp"></put>
+    </definition>
+
+    <definition name="CongentialAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/CongentialAU.jsp"></put>
+    </definition>
+
+    <definition name="TrunkAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/trunkinsertAU.jsp"></put>
+    </definition>
+
+    <definition name="EvaluationAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/EvaluationDetailsInsertAU.jsp"></put>
+    </definition>
+
+    <definition name="CardioPulmonaryDeseasesAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/CardioPulmonaryDeseasesAU.jsp"></put>
+    </definition>
+
+    <definition name="DwarfismAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/DwarfismAU.jsp"></put>
+    </definition>
+
+    <definition name="VisualImpairmentAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/VisualImpairmentAU.jsp"></put>
+    </definition>
+
+    <definition name="HearingImpairmentAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/HearingImpairmentAU.jsp"></put>
+    </definition>
+
+
+
+    <definition name="MRDevelopmentalScreeningTestInsertJspAUTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MRDevelopmentalScreeningTestInsertAU.jsp"></put>
+    </definition>
+
+    <definition name="DSTtestAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MRDevelopmentalTestInsertAU.jsp"></put>
+    </definition>
+
+    <definition name="InsertMentalretardationAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/InsertMentalretardationAU.jsp"></put>
+    </definition>
+
+    <definition name="VSMStestAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MRVinelandTestInsertAU.jsp"></put>
+    </definition>
+
+    <definition name="VsmsscreeningtestinsertAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MrVSMSScreeningTestInsertAU.jsp"></put>
+    </definition>
+
+    <definition name="MRBinetKamatDetailedTestDetailsInsertAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MRBinetKamatDetailedTestDetailsInsertAU.jsp"></put>
+    </definition>
+
+    <definition name="BKTtestAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MRBinetKamatTestInsertAU.jsp"></put>
+    </definition>
+
+    <definition name="MISICtestAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MRMalinsTestInsertAU.jsp"></put>
+    </definition>
+
+    <definition name="SFBtestAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MRSeguinTestInsertAU.jsp"></put>
+    </definition>
+
+    <definition name="PATtestAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MRAlexanderTestInsertAU.jsp"></put>
+    </definition>
+
+    <definition name="bhatiatestAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MRBhatiaTestInsertAU.jsp"></put>
+    </definition>
+
+    <definition name="MentalIllnessAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MentalIllnessAU.jsp"></put>
+    </definition>
+
+    <definition name="AmputaionFailureAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/AmputaionAUFailure.jsp"></put>
+    </definition>
+
+    <definition name="MentalFailureAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/MentalRetardationAUFailure.jsp"></put>
+    </definition>
+
+
+
+    <definition name="EvaluationFailureAUtile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/EvaluationAUFailure.jsp"></put>
+    </definition>
+    <definition name="scheduleAbstractSuccess" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/appealAuthorityAbstractReport.jsp"></put>
+    </definition>
+    <definition name="AppellateSchedulePrintTile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/AppellateSchedulePrint.jsp"></put>
+    </definition>
+    <!-- Appleat Authoritiy -->
+
+    <definition name="appleteAuthorityUpdatePersonalDetails" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/UpdateAppealPersonalData.jsp"></put>
+    </definition>
+
+    <definition name="appUpdate" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/UpdateAppealAuthority.jsp"></put>
+    </definition>
+
+    <!-- Ration Card details web service -->
+
+
+    <!-- Added by Abhi -->
+    <definition name="campDailyTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/campDailyReport.jsp"></put>
+    </definition>
+
+    <definition name="pensionReport" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/pensionForReport.jsp"></put>
+    </definition>
+
+    <!-- End -->
+
+    <!-- By Rekha -->
+    <definition name="PersoncodeForGraphtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/PersoncodeForGraph.jsp"></put>
+    </definition>
+    <definition name="HearingDBGraphtile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/HearingDBGraph.jsp"></put>
+    </definition>
+    <definition name="Graphprinttile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/Graphprint.jsp"></put>
+    </definition>
+    <!-- END -->
+
+
+    <!-- Added by Mohan -->
+
+
+
+    <definition name="mailServiceTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/mailService.jsp"></put>
+    </definition>
+
+    <definition name="adminMailServiceTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/replyMailService.jsp"></put>
+    </definition>
+
+    <definition name="HabcodeNotMatchTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/HabcodeNotMatch.jsp"></put>
+    </definition>
+
+    <!-- End -->
+
+    <definition name="ExistingPensionCodeorRationcardTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/ExistingPensionCodeorRationcard.jsp"></put>
+    </definition>
+    <definition name="ExistingPensionCodeorRationcardtotalTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/ExistingPensionCodeorRationcardtotal.jsp"></put>
+    </definition>
+
+
+    <definition name="DiagnosisDisabilityTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/diagnosisDisabilityUpdate.jsp"></put>
+    </definition>
+
+    <definition name="PhotoUploadDownloadTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/fileUploadDownload.jsp"></put>
+    </definition>
+
+    <definition name="RequestInformationCertificatePersonalTile" extends="DisabilityTile">
+        <put name="body" value="/DisabilityUITG/jsp/newCertificatePersonalDetails.jsp"></put>
+    </definition>
+
+    <definition name="RequestInformationTile" extends="DisabilityTile">
+        <put name="body" value="/DisabilityUITG/jsp/requestInformation.jsp"></put>
+    </definition>
+
+    <definition name="issueResolveRequestDetails" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/issueResolveRequestDetails.jsp"></put>
+    </definition>
+
+    <definition name="filterCandidateTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/filterCandidate.jsp"></put>
+    </definition>
+
+    <definition name="newCertificateTile" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/newCertificate.jsp"></put>
+    </definition>
+
+    <definition name="newPersonDetails" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/NewPersonDetails.jsp"></put>
+    </definition>
+
+
+    <definition name="loginDataReport" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/loginAllDataReport.jsp"></put>
+    </definition>
+
+    <definition name="mandalWiseClusterReport" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/mandalWiseClusterReport.jsp"></put>
+    </definition>
+
+    <definition name="modifiedAssesedPWDSDetails" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/modifiedAssesedPWDSDetails.jsp"/>
+        <!--<put name="body" value="/DisabilityUITG/jsp/modifiedAssesedPWDSDetails.jsp"></put>-->
+    </definition>
+    <definition name="modifiedAssesedPWDSDetailsPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/modifiedDistrictWiseStatusReportForPartBPrint.jsp"/>
+        <!--<put name="body" value="/DisabilityUITG/jsp/modifiedAssesedPWDSDetails.jsp"></put>-->
+    </definition>
+    <definition name="modifiedAssesedPWDSDetailsView" page="/DisabilityUITG/Tiles/PhaseReportLayout.jsp">
+        <put name="menu" value="/DisabilityUITG/Scripts/Menu.jsp" />
+        <put name="header" value="/DisabilityUITG/Scripts/LoginHeader.jsp" />
+        <put name="footer" value="/DisabilityUITG/Scripts/LoginFooter.jsp" />
+        <put name="date" value="/DisabilityUITG/jsp/AfterLogin/Reports/modifiedAssesedPWDSDetails.jsp"/>
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/modifiedDistrictWiseStatusReportForPartBView.jsp"></put>
+
+    </definition>
+
+    <definition name="UpdateSadaremDetails" extends="DisabilityTile" >
+        <put name="body" value="/DisabilityUITG/jsp/UpdateSadaremDetails.jsp"></put>
+    </definition>
+
+    <definition name="GrievancesRequestDetails" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/GrievancesRequestDetails.jsp"></put>
+    </definition>
+
+    <definition name="grievancesDPMApproveTiles" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/grievancesDPMApprove.jsp"></put>
+    </definition>
+
+    <definition name="callCentreRequestsListTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/callCentreRequestsList.jsp"></put>
+    </definition>
+    <definition name="requestModifiedListDetailsTile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/requestModifiedListDetails.jsp"></put>
+    </definition>
+    <definition name="grievancesApprovalDetailsTile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/grievancesApprovalDetails.jsp"></put>
+    </definition>
+    <definition name="existingCampReportTile" extends="WithOutHeader" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/existingCampReport.jsp"></put>
+    </definition>
+
+
+    <!--End-->
+
+    <definition name="PrintDetailsResultTile"  extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/PrintDetailsResult.jsp"/>
+    </definition>
+
+    <definition name="PrintReportDetails"  extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/PrintReportDetails.jsp"/>
+    </definition>
+    <definition name="PrintCountDetails"  extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/PrintCountDetails.jsp"/>
+    </definition>
+    <definition name="exportExcelAllData" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/exportExcelAllData.jsp"/>
+    </definition>
+
+
+    <definition name="currentCampInsert" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/currentCampInsert.jsp"></put>
+    </definition>
+    <definition name="totalData" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/totalDataReport.jsp"/>
+    </definition>
+    <definition name="campDetailsReportTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/campDetailsReport.jsp"></put>
+    </definition>
+
+    <!-- HARI START-->
+
+    <definition name="PersonCodeForUpdateDoctorsTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/PersonCodeForUpdateDoctors.jsp"></put>
+    </definition>
+    <definition name="TrunkupdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/trunkUpdatePrint.jsp"></put>
+    </definition>
+    <definition name="UpperExtrimityUpdatetileRe" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/ModifyUpperExtremityPrint.jsp"></put>
+    </definition>
+    <definition name="TransverseupdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TransverseUpdatePrint.jsp"></put>
+    </definition>
+    <definition name="LowerExtrimityupdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/lowerextremityupdatePrint.jsp"></put>
+    </definition>
+    <definition name="EvaluationupdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/EvaluationDetailsUpdatePrint.jsp"></put>
+    </definition>
+    <definition name="DwarfismUpdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/UpdateDwarfismPrint.jsp"></put>
+    </definition>
+    <definition name="CardioPulmonaryDeseasesUpdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/UpdateCardioPulmonaryPrint.jsp"></put>
+    </definition>
+    <definition name="HomePagetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Home/HomePage.jsp"></put>
+    </definition>
+    <definition name="passwordChangeTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/passwordChangePage.jsp"></put>
+    </definition>
+    <definition name="AmputationUpdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/AmputationUpdatePrint.jsp"></put>
+    </definition>
+    <!--change-->
+    <definition name="Doctorfailuretile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/Doctorfailure.jsp"></put>
+    </definition>
+    <definition name="addusertile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Newlogin/adduser.jsp"></put>
+    </definition>
+    
+    <definition name="campadmindtlstile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Newlogin/distwisecampadminreport.jsp"></put>
+    </definition>
+
+    <definition name="AddDoctorsInformationtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/AddDoctorsInformation.jsp"></put>
+    </definition>
+    <definition name="DoctorInsertFailuretile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/DoctorInsertFailure.jsp"></put>
+    </definition>
+    <definition name="DoctorUpdateFailuretile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/DoctorUpdateFailure.jsp"></put>
+    </definition>
+    <definition name="selectDisabilityTypetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/selectDisabilityType.jsp"></put>
+    </definition>
+    <definition name="updateDoctorsInformationtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/updateDoctorsInformation.jsp"></put>
+    </definition>
+    <definition name="DoctorDetailstile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/DoctorDetails.jsp"></put>
+    </definition>
+
+    <definition name="ExistingRationcardTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/ExistingRationcard.jsp"></put>
+    </definition>
+    <definition name="MentalIllnessUpdatetileRe" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MentalIllnessPrint.jsp"></put>
+    </definition>
+    <definition name="PartADisabilityDetailsUpdatetileRe" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/PartADisabilityDetailsUpdatePrint.jsp"></put>
+    </definition>
+
+    <definition name="PhysicalPersonalDetailsPrint" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/appealAuthorityDetailsPrintFormat.jsp"></put>
+    </definition>
+
+    <definition name="AppealPersonalDetailsPrint" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/appealAuthorityDetailsPrintFormat1.jsp"></put>
+    </definition>
+
+
+    <definition name="PartCUpdatetileRe" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/partcPrint.jsp"></put>
+    </definition>
+
+
+    <definition name="VisualImpairmentUpdatetileRe" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/VisualImpairmentPrint.jsp"></put>
+    </definition>
+    <definition name="LocomotorneedsupdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/PhysicalimpairmentUpdateForwadPrintAction.jsp"></put>
+    </definition>
+    <definition name="appletAuSuccess" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/AppletAuthorityForPartB.jsp"></put>
+    </definition>
+
+    <definition name="appletAuFailure" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/AppletAuthorityForPartB.jsp"></put>
+    </definition>
+    <definition name="appealPrints" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/AppealAuthorityPrints.jsp"></put>
+    </definition>
+    <definition name="ScheduleForAU" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/ScheduleForAU.jsp"></put>
+    </definition>
+
+    <definition name="PrintFormatsSelectionTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/PrintFormatsSelection.jsp"></put>
+    </definition>
+    <definition name="CampWiseDoctorsCountTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/campWiseDoctorsAssCount.jsp"></put>
+    </definition>
+    <definition name="campWiseDoctorsAssCountDetails" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/campWiseDoctorsAssCountDetails.jsp"></put>
+    </definition>
+    <definition name="CertificateGeneration" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/CertificateGeneration.jsp"></put>
+    </definition>
+    <definition name="HearingImpairmentupdateRetile" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/hearingPrint.jsp"></put>
+    </definition>
+    <!--changes-->
+    <definition name="MentalRetardationUpdatetileRee" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MentalRetalRetrdationUpdatePrint.jsp"></put>
+    </definition>
+    <definition name="MentalRetardationfinalupdatetileRee" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/UpdateMentalretardationPrint.jsp"></put>
+    </definition>
+    <definition name="MRDevelopmentalScreeningTestUpdateJspTileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MRDevelopmentalScreeningTestUpdatePrint.jsp"></put>
+    </definition>
+    <definition name="VsmsscreeningtestupdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MRVsmsScreeningTestUpdatePrint.jsp"></put>
+    </definition>
+    <definition name="MRBinetKamatDetailedTestDetailsUpdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MRBinetKamatDetailedTestDetailsUpdatePrint.jsp"></put>
+    </definition>
+    <definition name="malinstestupdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MRMalinsTestupdatePrint.jsp"></put>
+    </definition>
+    <definition name="seguintestupdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MRSeguinTestupdatePrint.jsp"></put>
+    </definition>
+    <definition name="PATtestUpdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MRAlexanderTestUpdatePrint.jsp"></put>
+    </definition>
+
+    <definition name="bhatiatestUpdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MRBhatiaTestUpdatePrint.jsp"></put>
+    </definition>
+    <definition name="OhCalculationDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TotalOhCalculations.jsp"></put>
+    </definition>
+    <definition name="TotalOhCalculationsPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TotalOhCalculationsPrint.jsp"></put>
+    </definition>
+    <definition name="TrunkCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TrunkCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="totaldisabilityCalculationDisplayTile" extends="WithOutHeaderFooter" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TotalDisabilityCalculations.jsp"></put>
+    </definition>
+    <definition name="TotalDisabilityCalculationsPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TotalDisabilityCalculationsPrint.jsp"></put>
+    </definition>
+    <definition name="LowerExtremityCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/LowerExtremityCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="LowerExtremityCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/LowerExtremityCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="UpperExtremityCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/UpperExtremityCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="AmputationCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/AmputationCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="TransverseCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TransverseCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="PhysicalImpairmentCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/PhysicalImpairmentCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="CardiopulmonaryCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/CardiopulmonaryCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="DwarfismCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/DwarfismCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="VisualCaluclationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/VisualCaluclationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="MentalIllnessCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MentalIllnessCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="MentalRetardationCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MentalRetardationCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="DSTCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/DSTCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="VSMScalculationsdisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/VSMScalculationsdisplayPrint.jsp"></put>
+    </definition>
+    <definition name="MRBKTCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MRBKTCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="MISICCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MISICCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="SFBCalculationDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/SFBCalculationDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="MRPATCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MRPATCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="BBPTICaluculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/BBPTICaluculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="HearingImpairmentCalculationsDisplayPrintTile" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/HearingImpairmentCalculationsDisplayPrint.jsp"></put>
+    </definition>
+    <definition name="HearingCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/HearingImpairmentCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="UpperExtremityCalculationsDisplayTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/UpperExtremityCalculationsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="AmputationCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/AmputationCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="TransverseCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TransverseCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="PhysicalImpairmentCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/PhysicalImpairmentCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="CardiopulmonaryCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/CardiopulmonaryCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="DwarfismCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/DwarfismCalculationsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="VisualCaluclationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/VisualCaluclationsDisplay.jsp"></put>
+    </definition>
+    <definition name="MentalIllnessCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MentalIllnessCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="CalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/CalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="DSTCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/DSTCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="VSMSCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/VSMScalculationsdisplay.jsp"></put>
+    </definition>
+    <definition name="SFBCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/SFBCalculationDisplay.jsp"></put>
+    </definition>
+    <definition name="MRBKTCalculationsDisplayTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/MRBKTCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="MRPATCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/MRPATCalculationsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="MISICCalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/MISICCalculationsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="BBPTICalculationsDisplayTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/BBPTICaluculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="MentalRetardationTotalTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MentalRetardationCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="addDoctorTile" extends="WithOutHeaderFooter" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/addDoctor.jsp"></put>
+    </definition>
+    <definition name="AddCamptile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/AddCampDetails.jsp"></put>
+    </definition>
+    <definition name="selectCamptile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/UpdateCamp.jsp"></put>
+    </definition>
+    <definition name="updateCampDispalytile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/UpdateCampDispaly.jsp"></put>
+    </definition>
+    <definition name="logouttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/logout.jsp"></put>
+    </definition>
+    <!-- HARI END-->
+
+      <!-- Exception -->
+
+    <definition name="OuterExceptionMessagetile" extends="OuterLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/Exception/ExceptionMessage.jsp"></put>
+    </definition>
+
+    <definition name="LoginExceptionMessagetile" extends="WithOutHeaderFooter" >
+        <put name="body" value="/common/error.jsp"></put>
+    </definition>
+    <!-- Exception END-->
+
+
+    <!--Balu Start -->
+    <definition name="TerritorySelectCommontile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/TerritorySelectForUpdateNew.jsp"></put>
+    </definition>
+    <definition name="UpdateByPersonCodeRestrictPartBTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/UpdateByPersonCodeRestrictPartB.jsp"></put>
+    </definition>
+
+    <definition name="PartADetailsInsertForExistingPensionNumberTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/PartADetailsInsertForExistingPensionNumber.jsp"></put>
+    </definition>
+
+    <definition name="RationcardPensionersDatatile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/RationcardPensionersData.jsp"></put>
+    </definition>
+
+    <definition name="PersonCodeforOnlyPartAInsertTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/PersonCodeforOnlyPartAInsert.jsp"></put>
+    </definition>
+
+    <definition name="personalDetailsInsertPartARestrictionTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/personalDetailsInsertPartARestriction.jsp"></put>
+    </definition>
+
+    <definition name="alreadyEnteredDataTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/alreadyDataEnterPage.jsp"></put>
+    </definition>
+
+    <definition name="PersonCodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/PersonCode.jsp"></put>
+    </definition>
+
+    <definition name="HearingFailuretile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/HearingImpairmentFailure.jsp"></put>
+    </definition>
+
+    <definition name="Certificatewithpersoncodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/CertificateWithPersoncode.jsp"></put>
+    </definition>
+
+    <definition name="physicallimpairmentcertificatewithpersoncodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/PhysicallimpairmentCertificateWithPersoncode.jsp"></put>
+    </definition>
+
+    <definition name="visualimpairmentcertificatewithpersoncodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/VisualimpairmentCertificateWithPersoncode.jsp"></put>
+    </definition>
+
+    <definition name="hearingimpairmentcertificatewithpersoncodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/HearingimpairmentCertificateWithPersoncode.jsp"></put>
+    </definition>
+
+    <definition name="mentalretardationcertificatewithpersoncodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/MentalretardationCertificateWithPersoncode.jsp"></put>
+    </definition>
+
+    <definition name="mentalillnesscertificatewithpersoncodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/MentalillnessCertificateWithPersoncode.jsp"></put>
+    </definition>
+
+    <!-- doctor-->
+
+    <definition name="HearingCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/HearingImpairmentCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="UpperExtremityCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/UpperExtremityCalculationsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="AmputationCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/AmputationCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="TransverseCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TransverseCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="PhysicalImpairmentCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/PhysicalImpairmentCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="CardiopulmonaryCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/CardiopulmonaryCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="DwarfismCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/DwarfismCalculationsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="VisualCaluclationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/VisualCaluclationsDisplay.jsp"></put>
+    </definition>
+    <definition name="MentalIllnessCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MentalIllnessCalculationsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="VSMSCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/VSMScalculationsdisplay.jsp"></put>
+    </definition>
+    <definition name="SFBCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/SFBCalculationDisplay.jsp"></put>
+    </definition>
+    <definition name="MRBKTCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/MRBKTCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="MRPATCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/MRPATCalculationsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="MISICCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/MISICCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="BBPTICalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/BBPTICaluculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="MentalRetardationTotaldoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/MentalRetardationCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="LowerExtremityCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/LowerExtremityCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="TrunkCalculationsDisplaydoctorTile" extends="LoginWithoutMenuLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TrunkCalculationsDisplay.jsp"></put>
+    </definition>
+    <definition name="OhCalculationDisplaydoctorTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/TotalOhCalculations.jsp"></put>
+    </definition>
+    <!-- doctor end-->
+
+
+    <definition name="Dwarfismtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/Dwarfism.jsp"></put>
+    </definition>
+
+    <definition name="Trunktile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/trunkinsert.jsp"></put>
+    </definition>
+
+    <definition name="appletAuTarget" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/AppletAuthorityForPartB.jsp"></put>
+    </definition>
+
+
+    <definition name="DSTtesttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MRDevelopmentalTestInsert.jsp"></put>
+    </definition>
+
+    <definition name="ExistingPensionCodeTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/ExistingPensionCode.jsp"></put>
+    </definition>
+
+    <definition name="AadharCardTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/AadharCard/aadharCardPersonDetails.jsp"></put>
+    </definition>
+
+    <definition name="AadharCardPartAFormTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/AadharCard/insertAadharCardPersonalDetails.jsp"></put>
+    </definition>
+
+    <definition name="alreadyAadharCardDataEnterPageTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/AadharCard/alreadyAadharCardDataEnterPage.jsp"></put>
+    </definition>
+
+
+    <definition name="AadharCardDetailsTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/AadharCard/aadharCardWebDetails.jsp"></put>
+    </definition>
+
+    <definition name="PartCtile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/PartC.jsp"></put>
+    </definition>
+
+
+    <definition name="PartARejectedDetailsUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/PartARejectedDetails.jsp"></put>
+    </definition>
+
+
+
+    <definition name="bhatiatesttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MRBhatiaTestInsert.jsp"></put>
+    </definition>
+
+
+    <definition name="RejectedDataEnteredSuccessAUtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/RejectedDataEnteredSuccessfully.jsp"></put>
+    </definition>
+    <definition name="MultipleRejecttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MultipleReject.jsp"></put>
+    </definition>
+
+
+    <definition name="PartARejectedDetailsAUtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/PartARejectedAUDetails.jsp"></put>
+    </definition>
+
+
+    <definition name="HearingImpairmenttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/HearingImpairment.jsp"></put>
+    </definition>
+
+
+    <definition name="MentalRetardationtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MentalRetardationInsert.jsp"></put>
+    </definition>
+
+    <definition name="MRDevelopmentalScreeningTestInsertJspTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MRDevelopmentalScreeningTestInsert.jsp"></put>
+    </definition>
+
+    <definition name="Vsmsscreeningtestinserttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MrVSMSScreeningTestInsert.jsp"></put>
+    </definition>
+
+    <definition name="PATtesttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MRAlexanderTestInsert.jsp"></put>
+    </definition>
+
+
+
+    <definition name="MRBinetKamatDetailedTestDetailsInserttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MRBinetKamatDetailedTestDetailsInsert.jsp"></put>
+    </definition>
+
+    <definition name="MentalIllnesstile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MentalIllness.jsp"></put>
+    </definition>
+
+
+    <definition name="Congentialtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/Congential.jsp"></put>
+    </definition>
+
+    <definition name="BKTtesttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MRBinetKamatTestInsert.jsp"></put>
+    </definition>
+
+    <definition name="HearingFailureAUtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/HearingImpairmentAUFailure.jsp"></put>
+    </definition>
+
+    <definition name="VisualImpairmenttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/VisualImpairment.jsp"></put>
+    </definition>
+
+
+    <definition name="multipledisabilitycertificatewithpersoncodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/MultipledisabilitycertificateWithPersoncode.jsp"></put>
+    </definition>
+
+    <definition name="RejectedCertificateInFlowtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RejectedCertificateInFlow.jsp"></put>
+    </definition>
+
+    <definition name="IdCardwithpersoncodetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/IdentityCardWithPersonCode.jsp"></put>
+    </definition>
+
+    <definition name="CertificateFailuretile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/CertificateFailure.jsp"></put>
+    </definition>
+
+    <definition name="RailwayCertificateFailuretile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RaiwayConcessionFailure.jsp"></put>
+    </definition>
+
+    <definition name="Doctorfailuretile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/Doctorfailure.jsp"></put>
+    </definition>
+
+    <definition name="railwayconcessionOHTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionOH.jsp"></put>
+    </definition>
+
+    <definition name="railwayconcessionVITile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionVI.jsp"></put>
+    </definition>
+
+    <definition name="railwayconcessionHITile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionHI.jsp"></put>
+    </definition>
+
+    <definition name="railwayconcessionMRTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionMR.jsp"></put>
+    </definition>
+
+    <definition name="railwayconcessionMITile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionMI.jsp"></put>
+    </definition>
+
+    <definition name="railwayconcessionMultipleTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionMultiple.jsp"></put>
+    </definition>
+
+
+    <definition name="doctorRailwayCertificateFailuretile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RaiwayConcessionFailure.jsp"></put>
+    </definition>
+
+
+
+    <definition name="doctorrailwayconcessionOHTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionOH.jsp"></put>
+    </definition>
+
+    <definition name="doctorrailwayconcessionVITile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionVI.jsp"></put>
+    </definition>
+
+    <definition name="doctorrailwayconcessionHITile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionHI.jsp"></put>
+    </definition>
+
+    <definition name="doctorrailwayconcessionMRTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionMR.jsp"></put>
+    </definition>
+
+    <definition name="doctorrailwayconcessionMITile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionMI.jsp"></put>
+    </definition>
+
+    <definition name="doctorrailwayconcessionMultipleTile" extends="LoginWithoutMenuLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RailwayConcessionMultiple.jsp"></put>
+    </definition>
+
+
+    <definition name="PersonCodeFailureForCetificateTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/PersoncodeFailureForCertificate.jsp"></put>
+    </definition>
+
+
+
+    <definition name="MentalFailuretile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/MentalRetardationFailure.jsp"></put>
+    </definition>
+
+    <definition name="InsertMentalretardationtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/NonPensioners/InsertMentalretardation.jsp"></put>
+    </definition>
+
+
+
+    <!-- Balu End-->
+
+<!--Edit Pensioners starts-->
+
+    <definition name="MemberDetails" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/NonPensioners/MemberDetails.jsp"></put>
+    </definition>
+
+    <definition name="DuplicateRecordFoundtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/DuplicateRecordFound.jsp"></put>
+    </definition>
+    <definition name="alreadyEnteredRationDataTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/NonPensioners/alreadyRationDataEnterPage.jsp"></put>
+    </definition>
+    <definition name="webServiceDetails" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/webServiceDetails.jsp"></put>
+    </definition>
+
+    <!--Reassessment for pension details edit-->
+    <definition name="TerritorySelectForUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/TerritorySelectForUpdate.jsp"></put>
+    </definition>
+    <definition name="TerritorySelectForUpdatetileRe" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/Edit/AppellateAuthority/TerritorySelectForUpdate.jsp"></put>
+    </definition>
+    <definition name="PersonCodeFailureTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PersonCodeFailure.jsp"></put>
+    </definition>
+    <definition name="UpdatePWDDetailsByPersonCodeTileRe" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/UpdatePWDDetailsByPersonCodeRe.jsp"></put>
+    </definition>
+    <definition name="Territoryfailuretile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/TerritoryFailure.jsp"></put>
+    </definition>
+    <definition name="PartADetailsUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PartADetailsUpdate.jsp"></put>
+    </definition>
+    <definition name="PartAdetailsViewModetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PartAdetailsViewMode.jsp"></put>
+    </definition>
+    <definition name="PartADetailsUpdateForExistingPensionNumbertile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PartADetailsUpdateForExistingPensionNumber.jsp"></put>
+    </definition>
+    <definition name="PartADetailsUpdateForExistingPensionNumbertile1" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PartADetailsUpdateForExistingPensionNumber1.jsp"></put>
+    </definition>
+    <definition name="PartADetailsDisplayToPartBUpdateTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PartADetailsDisplayToPartBUpdate.jsp"></put>
+    </definition>
+    <definition name="PartADetailsDisplaytoPersoncodeDeleteTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PartADetailsDisplaytoPersoncodeDelete.jsp"></put>
+    </definition>
+
+    <definition name="PersonCodeForPartAOnlyUpdateTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PersonCodeForPartAUpdate.jsp"></put>
+    </definition>
+
+    <definition name="PartARejectedDetailsUpdatetileRe" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/Print/PartARejectedDetailsPrint.jsp"></put>
+    </definition>
+    <definition name="LocomotorSublinkUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/LocomotorSublinkUpdate.jsp"></put>
+    </definition>
+    <definition name="Locomotorneedsupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PhysicalimpairmentUpdateSublink.jsp"></put>
+    </definition>
+    <definition name="UpperExtrimityUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/ModifyUpperExtremity.jsp"></put>
+    </definition>
+    <definition name="LowerExtrimityupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/lowerextremityupdate.jsp"></put>
+    </definition>
+    <definition name="AmputationUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/AmputationUpdate.jsp"></put>
+    </definition>
+    <definition name="Transverseupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/TransverseUpdate.jsp"></put>
+    </definition>
+    <definition name="Trunkupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/trunkupdate.jsp"></put>
+    </definition>
+    <definition name="Evaluationupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/EvaluationDetailsUpdate.jsp"></put>
+    </definition>
+    <definition name="CardioPulmonaryDeseasesUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/UpdateCardioPulmonary.jsp"></put>
+    </definition>
+    <definition name="DwarfismUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/UpdateDwarfism.jsp"></put>
+    </definition>
+    <definition name="PartCUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PartcUpdate.jsp"></put>
+    </definition>
+    <definition name="VisualImpairmentUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/UpdateVisualImpairment.jsp"></put>
+    </definition>
+    <definition name="DataEntrySuccessUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/DataEntrySuccessUpdate.jsp"></put>
+    </definition>
+    <definition name="HearingImpairmentupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/ModifyHearingImpairment.jsp"></put>
+    </definition>
+    <definition name="MentalRetardationUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MentalRetardationUpdate.jsp"></put>
+    </definition>
+    <definition name="MentalRetardationfinalupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/UpdateMentalretardation.jsp"></put>
+    </definition>
+    <definition name="MRDevelopmentalScreeningTestUpdateJspTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MRDevelopmentalScreeningTestUpdate.jsp"></put>
+    </definition>
+    <definition name="DSTtestupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MRDevelopmentalTestUpdate.jsp"></put>
+    </definition>
+    <definition name="Vsmsscreeningtestupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MRVsmsScreeningTestUpdate.jsp"></put>
+    </definition>
+    <definition name="MRBinetKamatDetailedTestDetailsUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MRBinetKamatDetailedTestDetailsUpdate.jsp"></put>
+    </definition>
+    <definition name="VSMStestupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MRVinelandTestUpdate.jsp"></put>
+    </definition>
+    <definition name="BKTtestupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MRBinetKamatTestUpdate.jsp"></put>
+    </definition>
+    <definition name="malinstestupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MRMalinsTestupdate.jsp"></put>
+    </definition>
+    <definition name="MentalRetardationUpdatetileRee" extends="DisabilityTilePrint" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/Print/MentalRetalRetrdationUpdatePrint.jsp"></put>
+    </definition>
+    <definition name="seguintestupdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MRSeguinTestupdate.jsp"></put>
+    </definition>
+    <definition name="PATtestUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MRAlexanderTestUpdate.jsp"></put>
+    </definition>
+    <definition name="bhatiatestUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/MRBhatiaTestUpdate.jsp"></put>
+    </definition>
+    <definition name="MentalIllnessUpdatetile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/UpdateMentalIllness.jsp"></put>
+    </definition>
+
+    <!--Edit pensioners end-->
+
+    <definition name="analysisReportPrintTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Analysis/WebsiteAnalysisReportPrint.jsp"></put>
+    </definition>
+
+    <!--certificate-->
+    <definition name="RejectedCertificatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/certificate/RejectedCertificate.jsp"></put>
+    </definition>
+
+    <!--Add Pensioners-->
+
+    <!--Pension rejected-->
+
+    <definition name="RejectedDataEnteredSuccesstile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/RejectedDataEnteredSuccessfully.jsp"></put>
+    </definition>
+
+    <definition name="PartADisabilityDetailsUpdatetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PartADisabilityDetailsUpdate.jsp"></put>
+    </definition>
+    <!--===== Starts for Employee Form Flow ============-->
+
+    <definition name="EnterEmployeeIdTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/EnterEmployeIdForNewPensioner.jsp"></put>
+    </definition>
+
+    <definition name="DuplicateRecordFoundtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/DuplicateRecordFound.jsp"></put>
+    </definition>
+
+    <definition name="PartADisabilityDetailsInserttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/PartADisabilityDetailsInsert.jsp"></put>
+    </definition>
+
+    <definition name="PartARejectedDetailstile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/PartARejectedDetails.jsp"></put>
+    </definition>
+
+    <definition name="SFBtesttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MRSeguinTestInsert.jsp"></put>
+    </definition>
+
+    <definition name="MISICtesttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MRMalinsTestInsert.jsp"></put>
+    </definition>
+
+
+    <definition name="VSMStesttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/MRVinelandTestInsert.jsp"></put>
+    </definition>
+    <!--NonPensioners-->
+
+    <definition name="SelectPensionerOrNonPensionerTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/SelectPensionOrNonPensioner.jsp"></put>
+    </definition>
+    <!--===== Ends for Employee Form Flow ============-->
+
+    <!--Edit Pensioners starts-->
+    <definition name="SelectAnyoneofThreeFlowsTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/SelectAnyoneofThreeFlows.jsp"></put>
+    </definition>
+    <definition name="appleteAuthorityPersonalDetails" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/appleteAuthorityPersonalDetails.jsp"></put>
+    </definition>
+
+
+    <definition name="AmputaionFailuretile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/AmputaionFailure.jsp"></put>
+    </definition>
+
+    <definition name="PartADetailsInserttile1" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/Edit/AppellateAuthority/PartADetailsInsert_1.jsp"></put>
+    </definition>
+    <definition name="UpdatePWDDetailsByPersonCodeTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/UpdatePWDDetailsByPersonCode.jsp"></put>
+    </definition>
+
+    <definition name="Physicalimpairmenttile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/PhysicalimpairmentSublink.jsp"></put>
+    </definition>
+
+
+
+    <definition name="LocomotorSublinktile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/LocomotorSublink.jsp"></put>
+    </definition>
+
+    <definition name="DataEntrySuccesstile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/DataEntrySuccess.jsp"></put>
+    </definition>
+
+    <definition name="PartCFailuretile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/PartCFailure.jsp"></put>
+    </definition>
+
+    <definition name="UpperExtrimitytile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/Upperextrimity.jsp"></put>
+    </definition>
+
+    <definition name="LocomotorLinkstile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/LocomotorLinks.jsp"></put>
+    </definition>
+
+    <definition name="LowerExtrimitytile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/lowerextremityinsert.jsp"></put>
+    </definition>
+
+    <definition name="Amputationtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/Amputation.jsp"></put>
+    </definition>
+
+    <definition name="Transversetile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/Transverse.jsp"></put>
+    </definition>
+
+
+    <definition name="Evaluationtile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/EvaluationDetailsInsert.jsp"></put>
+    </definition>
+
+    <definition name="CardioPulmonaryDeseasestile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/CardioPulmonaryDeseases.jsp"></put>
+    </definition>
+
+    <definition name="uploadGosActs" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/UploadGosandActs.jsp" />
+    </definition>
+    <definition name="goreport" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/Gos.jsp" />
+    </definition>
+    <definition name="ImpLinkTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/ImpLink.jsp"/>
+    </definition>
+    <definition name="WebSiteReport" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/ImpLinkReport.jsp"/>
+    </definition>
+    <definition name="addContactUs" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/AddContactUsDetails.jsp"/>
+    </definition>
+    <definition name="contactUsReport" extends="OuterLayout">
+        <put name="body" value="/common/ContactUs.jsp"/>
+    </definition>
+    <definition name="photoGalleryUpload" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/PhotoGallery.jsp" />
+    </definition>
+
+    <definition name="photoGallery" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/PhotoGalleryView.jsp" />
+    </definition>
+    <definition name="newphotoGallery" extends="OuterLayout">
+        <put name="body" value="/common/newPhotoGalleryView.jsp" />
+    </definition>
+    <definition name="photoGalleryView" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/GalleryView.jsp" />
+    </definition>
+    <definition name="blog" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/Blog.jsp" />
+    </definition>
+
+    <definition name="blogSubjects" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/AddBlogSubjects.jsp" />
+    </definition>
+
+    <definition name="blogPost" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/BlogPost.jsp" />
+    </definition>
+    <definition name="CMPUploads" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/CMPUploads.jsp" />
+    </definition>
+
+    <definition name="CMPView" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/CMPView.jsp" />
+    </definition>
+
+    <definition name="circularNoGeneration" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/CircularNoGeneration.jsp" />
+    </definition>
+    <definition name="aboutFormTile" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/About.jsp"></put>
+    </definition>
+    
+    <definition name="collectorReportsTiles" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/collectorReport.jsp"></put>
+    </definition>
+    <definition name="directorReportsTiles" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/DirectorReport.jsp"></put>
+    </definition>
+    <definition name="PercentageWiseReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/PercentageWiseReport.jsp"></put>
+    </definition>
+    <definition name="percentageWiseReportPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/percentageWiseReportPrint.jsp"></put>
+    </definition>
+    <definition name="apsrtcCertificateTiles" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/ApsrtcCertificate.jsp"></put>
+    </definition>
+    <definition name="apsrtcInputFormTiles" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/ApsrtcInputForm.jsp"></put>
+    </definition>
+    <definition name="doctorSign" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/DoctorSign.jsp"></put>
+    </definition>
+
+    <definition name="apsrtcCertificatePrintTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/ApsrtcCertificatePrint.jsp"></put>
+    </definition>
+    <definition name="apsrtcCertificatePrintTile1" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/ApsrtcCertificatePrint1.jsp"></put>
+    </definition>
+    <definition name="outside" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/DirectorReportOutside.jsp"></put>
+    </definition>
+  <definition name="newoutside" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/DirectorReportOutsideView.jsp"></put>
+    </definition>
+     <definition name="cMDashBoardReport6Tile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/cMDashBoardReport6.jsp"></put>
+    </definition>
+    <definition name="PersonCodeAcknowledgement" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PersonCodeAcknowledgement.jsp"></put>
+    </definition>
+    <definition name="PersonCodeAcknowledgementPrint" extends="PrintLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/Pensioners/PersonCodeAcknowledgementPrint.jsp"></put>
+    </definition>
+    <definition name="personalDetailsForPersonCodeTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/partADetailsForExistingPersonCode.jsp"></put>
+    </definition>
+    <definition name="campScheduleWithPersonCodeTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/campScheduleWithPersonCode.jsp"></put>
+    </definition>
+    <definition name="SelectPensionerOrNonPensionerPartATile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/SelectPensionOrNonPensionerPartA.jsp"></put>
+    </definition>
+    <definition name="mandalClusterlevelPwd" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/mandalClusterlevelPwd.jsp"></put>
+    </definition>
+    <definition name="mandalClusterlevelPwdIndividualDetails" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/mandalClusterlevelPwdIndividualDetails.jsp"></put>
+    </definition>
+    <definition name="acknowledgementPrintTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/acknowledgementPrint.jsp"></put>
+    </definition>
+    <definition name="acknowledgementDisplayTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/acknowledgementDisplay.jsp"></put>
+    </definition>
+    <definition name="acknowledgementDisplayPrintTile" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/acknowledgementDisplayPrint.jsp"></put>
+    </definition>
+
+    <!--01-10-2014-->
+    <definition name="editContactUs" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/editContactUsDetails.jsp"/>
+    </definition>
+    <!--01-10-2014-->
+    <definition name="pwdsDisabilityPension" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/pwdsDisabilityPension.jsp"></put>
+    </definition>
+    <definition name="AadharCardMappingTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/aadharCardMapping.jsp"></put>
+    </definition>
+    <definition name="AadharCardMappingHabitaionTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/aadharCardMappingHabitation.jsp"></put>
+    </definition>
+    <definition name="aadharCardUpdateTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/aadharCardUpdate.jsp"></put>
+    </definition>
+    <definition name="CalculationsDisplayDoctorTile" extends="LoginPageLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Masters/CalculationsDisplay.jsp"></put>
+    </definition>
+
+    <definition name="sadaremidNothavingaadhracardNos" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/sadaremidNothavingaadhracardNos.jsp"></put>
+    </definition>
+ <definition name="abstractsadaremidNothavingaadhracardNos" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/abstractsadaremidNothavingaadharcardNos.jsp"></put>
+    </definition>
+
+    <definition name="sadaremidNothavingaadhracardNosPrint" extends="PrintLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/sadaremidNothavingaadhracardNosPrint.jsp"></put>
+    </definition>
+
+    <definition name="DirectorReportIndividualDetails" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/DirectorReportIndividualDetails.jsp"></put>
+    </definition>
+    <definition name="RejectedAadharMappingTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/RejectedAadharMapping.jsp"></put>
+    </definition>
+
+    <definition name="mesevaSearchTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/Meeseva/mesevaSearch.jsp"></put>
+    </definition>
+
+    <definition name="printCertificateTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/Meeseva/printMeesevaCertificate.jsp"></put>
+    </definition>
+    <definition name="certificatesUploadTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/CertificatesUpload.jsp"/>
+    </definition> 
+    
+     <definition name="PartARequestFormDecisionTile" extends="LoginLayout">
+        <put name="body" value="/PartAForm/PartARequestFormDecision.jsp"/>
+    </definition> 
+     
+    <definition name="PartanoproofdeoTile" extends="LoginLayout" >
+        <put name="body" value="/PartAForm/PartaWithoutProofDeo.jsp"></put>
+    </definition> 
+    
+    
+     <definition name="withoutaadharpendingfordecisionTile" extends="LoginLayout">
+        <put name="body" value="/PartAForm/withoutaadharpendingfordecision.jsp"/>
+     </definition> 
+    
+     <definition name="PartARequestStatusByUserTile" extends="LoginLayout">
+        <put name="body" value="/PartAForm/PartAFormRequestList.jsp"/>
+    </definition> 
+    
+     <definition name="PartARequestViewPrintTile" extends="LoginLayout">
+        <put name="body" value="/PartAForm/PartAReqPrintView.jsp"/>
+    </definition> 
+    
+     <definition name="PartARequestGlanceRptTile" extends="LoginLayout">
+        <put name="body" value="/PartAForm/PartAFormRequestAtGlanceRpt.jsp"/>
+    </definition> 
+    
+     <definition name="loadpartawithoutproofentryTile" extends="LoginLayout">
+        <put name="body" value="/PartAForm/PartARequestEntryForm.jsp"/>
+    </definition> 
+     
+    
+      <definition name="partapageTile" extends="LoginLayout">
+        <put name="body" value="/common/partadecisionpage.jsp"/>
+    </definition> 
+    
+    
+     <definition name="searchPensioncardDetails" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/searchPensioncardDetails.jsp"></put>
+    </definition>
+
+       <definition name="searchrationCardDetails" extends="OuterLayout">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Menu/searchrationCardDetails.jsp"></put>
+    </definition>
+
+      <definition name="captureDeadDetailsTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/captureDeadDetails.jsp"></put>
+    </definition>
+      <definition name="captureDeadDetailsSubmitTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/captureDeadDetailsSubmit.jsp"></put>
+    </definition>
+     <definition name="temporaryCertificateReportTile" extends="LoginLayout">
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/TemporaryCertificateReport.jsp"></put>
+    </definition>
+    <definition name="certificateUploadReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/certificateUploadReport.jsp"></put>
+    </definition>
+      <definition name="pWDdataValidationReportTile" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/PWDdataValidationReport.jsp"></put>
+    </definition>
+
+
+    <definition name="pwdValAbstReport" extends="WithOutHeader">
+        <put name="body" value="/DisabilityUITG/jsp/HomePage/Reports/pwdValAbstReport.jsp"></put>
+    </definition>
+     
+      <definition name="openreport16" extends="WithOutHeader">
+        <put name="body" value="/openreports/report16.jsp" />
+    </definition> 
+    <definition name="openreport17" extends="WithOutHeader">
+        <put name="body" value="/pwddatavalidation/expiredsadaremcertis.jsp" />
+    </definition>
+    
+    <definition name="districtWiseCountTile" extends="WithOutHeader">
+        <put name="body" value="/pwddatavalidation/districtWiseExpiredSadaremCertis.jsp" />
+    </definition>
+    
+  <definition name="updatecaptureDeadDetailsTile" extends="LoginLayout">
+        <put name="body" value="/pwddatavalidation/updatepwddetails.jsp"></put>
+    </definition>
+    
+     <definition name="PWDReportDetailsTile" extends="LoginLayout">
+        <put name="body" value="/pwddatavalidation/pwdReportdetails.jsp"></put>
+    </definition>
+    
+    <definition name="updatedPwdReportTile" extends="LoginLayout">
+        <put name="body" value="/pwddatavalidation/updatedPwdReport.jsp"></put>
+    </definition>
+    
+  <definition name="editPwdDetailsTile" extends="LoginLayout">
+        <put name="body" value="/pwddatavalidation/editPwdDetailsTile.jsp"></put>
+    </definition>   
+    <definition name="rejectPwdDetailsTile" extends="LoginLayout">
+        <put name="body" value="/pwddatavalidation/rejectPwdDetails.jsp"></put>
+    </definition> 
+        <definition name="confirmPwdDetailsTile" extends="LoginLayout">
+        <put name="body" value="/pwddatavalidation/viewsavedpwddetails.jsp"></put>
+    </definition> 
+      
+        <definition name="rejectconfirmPwdDetailsTile" extends="LoginLayout">
+        <put name="body" value="/pwddatavalidation/viewrejectedpwddetails.jsp"></put>
+    </definition> 
+    
+        <!-- Issue Tracking System Tiles Started -->
+    
+		  <definition name="newissuerequestTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/raiseNewRequest.jsp"></put>
+		  </definition> 
+		    <definition name="newissueapprovalrequestTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/issueApproval.jsp"></put>
+		  </definition>    
+		  
+		    <definition name="namechangeissuerequestTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/nameChangeRequest.jsp"></put>
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition>   
+		   <definition name="relationnametypechangeissuerequestTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/relationnametypechange.jsp"></put>
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition>
+          <definition name="addresschangeissuerequestTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/addresschangeRequest.jsp"></put>
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition>
+		  <definition name="districtaddressChangeTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/districtaddresschangeRequest.jsp"></put>
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition>
+		  <definition name="sadaremdeletionissueTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/sadaremDeletionRequest.jsp"></put>
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition>
+		  
+		  <definition name="iframeapproverejectrequestTile" extends="IssueTrackingLayoutiframe">
+		     <put name="body" value="/issuestrackingsys/approvalRejectIframe.jsp"></put>
+		  </definition>
+		  <definition name="myRequestListTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/myRequestList.jsp"></put>
+		  </definition>
+		   <definition name="causeOfDisabilityChangeTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/causeOfDisabiiltychange.jsp"></put>
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition> 
+		   <definition name="aadharMismatchChangeTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/AadharMismatchRequest.jsp"></put>
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition>  
+		   <definition name="photoChangeTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/photoChangeRequest.jsp"></put>
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition>  
+		   <definition name="fullnamechangeissuerequestTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/fullNameChangeRequest.jsp"></put> 
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition> 
+		  
+		   <definition name="manualphotoissuerequestTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/ManualPhotoUploadRequest.jsp"></put> 
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition> 
+		    
+		   <definition name="personstatusissuerequestTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/personStatusRequest.jsp"></put> 
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition> 
+		  
+		   <definition name="PartbReEntryIssueTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/partBreEntryNewRequest.jsp"></put> 
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition> 
+		  
+		   <definition name="MultipleGrievanceIssueTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/multipleGrievanceNewRequest.jsp"></put> 
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition>  
+		  
+		     <definition name="gendercorrectionTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/genderRequest.jsp"></put> 
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition> 
+		  
+		   <definition name="agecorrectionissueTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/ageCorrectionRequest.jsp"></put> 
+		      <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+		  </definition>
+		  
+		   <definition name="StatusDashboardTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/StatusDashboard.jsp"></put>  
+		  </definition> 
+		  
+		   <definition name="DistrictWiseStatusDashboardTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/distwisegrievancedashboard.jsp"></put>  
+		  </definition>
+		    
+		   <definition name="sadaremiddtldrpttile" extends="IssueTrackingLayout">
+		    <put name="body" value="/issuestrackingsys/sadaremiddtldrpt.jsp"></put>
+		   </definition>
+		   
+		    <definition name="newopenissueapprovalrequestTile" extends="IssueTrackingLayout">
+		     <put name="body" value="/issuestrackingsys/openissueApproval.jsp"></put>
+		  </definition> 
+
+          <definition name="iframeopenissueapproverejectrequestTile" extends="IssueTrackingLayoutiframe">
+		     <put name="body" value="/issuestrackingsys/openissueapprovalRejectIframe.jsp"></put>
+		  </definition>
+		   <definition name="partbDeletionTile" extends="LoginLayout">
+		     <put name="body" value="/InternalScreens/partBDeletion.jsp"></put>  
+		  </definition> 
+		  
+		  	   <definition name="AadharDetagTile" extends="LoginLayout">
+		     <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Others/AadharDetag.jsp"></put>  
+		  </definition> 
+		   
+<!-- 		  <definition name="requestListiframe" extends=""> -->
+<!-- 		     <put name="body" value="/issuestrackingsys/myrequestlistIframe.jsp"></put> -->
+<!-- 		  </definition> -->
+	   <!-- Issue Tracking System Tiles Ended -->
+  
+        <!--   <definition name="AppellateAuthorityPartATile" extends="IssueTrackingLayout">
+             <put name="body" value="/AppellateAuthority/AppellateTest.jsp"></put>
+          </definition> -->
+  <definition name="loadsadarembasicdtlsTile" extends="LoginLayout">
+             <put name="body" value="/common/sadarembasicdetails.jsp"></put>
+  </definition>
+  
+  
+  
+  <definition name="AppellateAuthorityPartATile" extends="IssueTrackingLayout">
+             <put name="body" value="/AppellateAuthority/AppellateAssessList.jsp"></put>
+  </definition>
+  
+  <definition name="appellatestatustrackTile" extends="IssueTrackingLayout">
+             <put name="body" value="/AppellateAuthority/AppellatStatusTrackerReport.jsp"></put>
+  </definition>
+  
+  <definition name="AppellateAuthorityTile" extends="IssueTrackingLayout">
+       <put name="body" value="/issuestrackingsys/AppellateAuthorityRequest.jsp"></put>
+       <put name="basicdtls" value="/issuestrackingsys/basicData.jsp" /> 
+  </definition>
+  <definition name="AppellateProofsReportTile" extends="IssueTrackingLayout">
+       <put name="body" value="/issuestrackingsys/AppelleteProofsReport.jsp"></put>
+  </definition>
+  
+  <definition name="AppellateAuthoritySADAREMDtlsTile" extends="IssueTrackingLayout">
+    <put name="body" value="/AppellateAuthority/AppellateAssessmentPartA.jsp"></put>
+  </definition>
+  
+  <definition name="dirRejectAppletteTile" extends="LoginLayout">
+    <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Assessment/Edit/AppellateAuthority/RejectedDataEnteredSuccessfully.jsp"></put>
+  </definition>
+  
+     <definition name="IssueRequestRaiseReporttile" extends="LoginLayout" >
+        <put name="body" value="/issuestrackingsys/IssueRequestRaiseReport.jsp"></put>
+    </definition>
+    
+    <definition name="useraddTile" extends="LoginLayout" >
+        <put name="body" value="/InternalScreens/userAdd.jsp"></put>
+    </definition>
+    
+         <definition name="mismandalTile" extends="LoginLayout" >
+        <put name="body" value="/mis/mandalmis.jsp"></put>
+    </definition> 
+       <definition name="misdpmTile" extends="LoginLayout" >
+        <put name="body" value="/mis/dpmmis.jsp"></put>
+    </definition>  
+    <definition name="misspmuTile" extends="LoginLayout" >
+        <put name="body" value="/mis/spmumis.jsp"></put>  
+    </definition>
+    
+ <definition name="misspmudistTile" extends="LoginLayout" >
+        <put name="body" value="/mis/spmumisdistwisetargets.jsp"></put>
+    </definition> 
+    
+     <definition name="misspmudistwisereportTile" extends="LoginLayout" >
+        <put name="body" value="/mis/spmumisdistwisereport.jsp"></put>
+    </definition> 
+     
+    <definition name="mispopulationtile" extends="LoginLayout" >
+        <put name="body" value="/mis/populationinsert.jsp"></put>
+    </definition>
+    
+     <definition name="mispopulationupdatetile" extends="LoginLayout" >
+        <put name="body" value="/mis/populationupdate.jsp"></put>
+    </definition>
+    
+    <definition name="partanoproofdeoInsertTile" extends="LoginLayout" >
+        <put name="body" value="/common/PartaWithoutProofDeoInsert.jsp"></put>
+    </definition>
+    
+    <definition name="partAworklistFormTile" extends="LoginLayout" >
+        <put name="body" value="/common/partAWithoutProofWorkListCA.jsp"></put>
+    </definition>
+    
+    <definition name="PDReportPartAEntryTile" extends="LoginLayout" >
+        <put name="body" value="/DisabilityUITG/jsp/AfterLogin/Reports/PDReportPartAEntry.jsp"></put>
+    </definition>
+    
+    <definition name="loadUserLoginModificationTiles" extends="LoginLayout" >
+        <put name="body" value="/master/UserLoginModification.jsp"></put>
+    </definition>
+    
+    <definition name="loadUserDetailsforEditTiles" extends="LoginLayout" >
+        <put name="body" value="/master/UserLoginEditDtls.jsp"></put>
+    </definition>
+    
+    <definition name="loadNewUserLoginDetailsTile" extends="LoginLayout" >
+        <put name="body" value="/master/NewUserLogin.jsp"></put>
+    </definition>
+    
+     
+</tiles-definitions>

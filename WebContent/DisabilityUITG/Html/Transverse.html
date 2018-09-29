@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html><head><title></title>
+        <meta http-equiv=content-type content="text/html; charset=windows-1252">
+        <meta content="mshtml 6.00.2900.3314" name=generator> <link rel="stylesheet"  href="../css/sadarem_styles.css"/></head>
+    <body>
+
+       <p>Transverse Deficiency Calculation</p>
+        <table class="inputform" cellspacing="1" cellpadding="0" width="90%" align=center border=0>
+            <tbody>
+                <tr>
+                    <th>Table Name</th>
+                    <th>Field Names</th>
+                    <th></th>
+                    <th>Range</th>
+                    <th>Right</th>
+                    <th>Left</th>
+                </tr>
+                <tr>
+
+                    <td align=left colSpan=7>4.1  TRANSVERSE DEFICIENCIES</td>
+                </tr>
+
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>4.1.1   Arm complete (shoulder disarticulation)</td>
+                    <td align=center><FONT size=2>0</FONT></td>
+                    <td align=center><FONT size=2>0-100</FONT></td>
+                    <td align=center><FONT size=2>90</FONT></td>
+                    <td align=center><FONT size=2>90</FONT></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>4.1.2   Proximal upper arm (Above elbow amputee)</td>
+                    <td align=center><FONT size=2>0</FONT></td>
+                    <td align=center><FONT size=2>0-100</FONT></td>
+                    <td align=center><FONT size=2>85</FONT></td>
+                    <td align=center><FONT size=2>85</FONT></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>4.1.3   Forearm complete (Elbow disarticulation)</td>
+                    <td align=center><FONT size=2>0</FONT></td>
+                    <td align=center><FONT size=2>0-100</FONT></td>
+                    <td align=center><FONT size=2>75</FONT></td>
+                    <td align=center><FONT size=2>75</FONT></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>4.1.4   Lower forearm (Below elbow amputee)</td>
+                    <td align=center><FONT size=2>0</FONT></td>
+                    <td align=center><FONT size=2>0-100</FONT></td>
+                    <td align=center><FONT size=2>65</FONT></td>
+                    <td align=center><FONT size=2>65</FONT></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>4.1.5   Carpal complete (Wrist disarticulation) </td>
+                    <td align=center><FONT size=2>0</FONT></td>
+                    <td align=center><FONT size=2>0-100</FONT></td>
+                    <td align=center><FONT size=2>60</FONT></td>
+                    <td align=center><FONT size=2>60</FONT></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>4.1.6   Metacarpal complete (Disarticulation through carpal bones) </td>
+                    <td align=center><FONT size=2>0</FONT></td>
+                    <td align=center><FONT size=2>0-100</FONT></td>
+                    <td align=center><FONT size=2>55</FONT></td>
+                    <td align=center><FONT size=2>55</FONT></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>4.1.7  Thigh complete (Hip disarticulation)</td>
+                    <td align=center><FONT size=2>0</FONT></td>
+                    <td align=center><FONT size=2>0-100</FONT></td>
+                    <td align=center><FONT size=2>90</FONT></td>
+                    <td align=center><FONT size=2>90</FONT></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>4.1.8  Lower thigh (Above knee amputee) </td>
+                    <td align=center><FONT size=2>0</FONT></td>
+                    <td align=center><FONT size=2>0-100</FONT></td>
+                    <td align=center><FONT size=2>80</FONT></td>
+                    <td align=center><FONT size=2>80</FONT></td>
+                </tr>
+                <tr>
+                    <td colspan=6><br><br><br>
+                        <b>Calculation Guidelines: -</b><br><br>
+                        1.  Calculation will be done separately on left side and right side parts.<br>
+                        2.  If any side the value is >= 90, then no calculation will be done. That value will be directly taken as temporary result.<br>
+                        3.  If there is no value >=90, then the actual calculation part will be done and the final value will be taken as temporary result.<br>
+                        4.  Calculation will be done on the following principles.<br>
+                        a)  First sort all the values in descending order.<br>
+                        b)  Select the first one as value a, and the second one as value b.<br>
+                        c)  Supply these a,b values to the following formula.<br>
+                        a+((b*(90-a))/90);<br>
+                        d)  The above formula gives a result. And this result will be taken as a value for the next calculation.<br>
+                        e)  In the next calculation the b value will be the next value in the descending order.<br>
+                        f)  This procedure will be repeated for respective number of times. Finally we will get a temporary result of one side.<br>
+                        g)  Follow the same procedure for the other side. Then the we will get the temporary result of other side.<br>
+                        h)  Now compare the both temporary results. The maximum between them will be taken as a value and the other is taken as b value.<br>
+                        g)  Atlast apply these two values to the formula given in point[c]. <br>
+                        h)  The output of the formula will be taken as final result and will be entered into the database.<br>
+                </tr>
+            </tbody></table>
+        <br><br>
+        <table align="center">
+            <tr>
+                <td>
+                    <center><a href="javascript:window.close()"> Close the Window</a></center>
+                </td>
+            </tr>
+
+        </table>
+    </body></html>
